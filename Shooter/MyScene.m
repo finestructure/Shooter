@@ -35,20 +35,17 @@ static const CGFloat SnowInitialBirthRate = 20;
         { // flame
             _flame = [SKEmitterNode emitterNodeWithParticleFileNamed:@"flame"];
             _flame.position = CGPointMake(CGRectGetMidX(self.frame), FlameYOffset);
-            _flame.physicsBody.categoryBitMask = FlameCategory;
-            _flame.physicsBody.collisionBitMask = 0;
-            _flame.physicsBody.contactTestBitMask = SnowCategory;
             [self addChild:_flame];
         }
 
-        { // snow
+        { // snowflakes
             for (int i = 0; i < 50; ++i) {
                 SKNode *n = [SnowMachine createSnowFlakeInFrame:self.frame];
                 [self addChild:n];
             }
         }
 
-
+        self.physicsWorld.gravity = CGVectorMake(0, 0);
         self.physicsWorld.contactDelegate = self;
 
     }
