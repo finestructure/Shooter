@@ -125,17 +125,8 @@
 		5A3BD4DF182634BE008357AE /* Shooter */ = {
 			isa = PBXGroup;
 			children = (
-				5A3BD4E8182634BE008357AE /* AppDelegate.h */,
-				5A3BD4E9182634BE008357AE /* AppDelegate.m */,
-				5A3BD4EB182634BE008357AE /* Main.storyboard */,
-				5A3BD4EE182634BE008357AE /* ViewController.h */,
-				5A3BD4EF182634BE008357AE /* ViewController.m */,
-				5A3BD4F1182634BE008357AE /* MyScene.h */,
-				5A3BD4F2182634BE008357AE /* MyScene.m */,
-				5A3BD4F4182634BE008357AE /* Spaceship.png */,
-				5A3BD51318263938008357AE /* Flame.sks */,
-				5A3BD51418263938008357AE /* spark.png */,
-				5A3BD4F6182634BE008357AE /* Images.xcassets */,
+				5A3BD51818263E1E008357AE /* Classes */,
+				5A3BD51718263E02008357AE /* Resources */,
 				5A3BD4E0182634BE008357AE /* Supporting Files */,
 			);
 			path = Shooter;
@@ -168,6 +159,31 @@
 				5A3BD506182634BE008357AE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A3BD51718263E02008357AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A3BD4EB182634BE008357AE /* Main.storyboard */,
+				5A3BD4F6182634BE008357AE /* Images.xcassets */,
+				5A3BD4F4182634BE008357AE /* Spaceship.png */,
+				5A3BD51318263938008357AE /* Flame.sks */,
+				5A3BD51418263938008357AE /* spark.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5A3BD51818263E1E008357AE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5A3BD4E8182634BE008357AE /* AppDelegate.h */,
+				5A3BD4E9182634BE008357AE /* AppDelegate.m */,
+				5A3BD4EE182634BE008357AE /* ViewController.h */,
+				5A3BD4EF182634BE008357AE /* ViewController.m */,
+				5A3BD4F1182634BE008357AE /* MyScene.h */,
+				5A3BD4F2182634BE008357AE /* MyScene.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
