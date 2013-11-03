@@ -8,6 +8,7 @@
 
 #import "MyScene.h"
 
+#import "Rng.h"
 #import "SKEmitterNode+Util.h"
 
 
@@ -17,7 +18,6 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 @implementation MyScene {
     SKNode *_flame;
-    SKEmitterNode *_snow;
 }
 
 
@@ -33,12 +33,19 @@ static const CGFloat SnowInitialBirthRate = 20;
         }
 
         { // snow
-            _snow = [SKEmitterNode emitterNodeWithParticleFileNamed:@"snow"];
-            _snow.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height);
-            _snow.particleBirthRate = SnowInitialBirthRate;
-            _snow.particlePositionRange = CGVectorMake(self.frame.size.width,
-                                                       _snow.particlePositionRange.dy);
-            [self addChild:_snow];
+            CGFloat time = 2;
+            CGPoint start = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height-10);
+            CGFloat angleRange = 12*M_PI/180;
+
+            CGFloat angle = [Rng uniformMin:-angleRange max:angleRange];
+            CGFloat x = self.frame.size.height * tan(angle);
+            CGPoint end = CGPointMake(x, 0);
+
+            SKSpriteNode *n = [SKSpriteNode spriteNodeWithImageNamed:@"spark.png"];
+            n.position = start;
+            SKAction *a = [SKAction moveTo:end duration:time];
+            [n runAction:a];
+            [self addChild:n];
         }
     }
     return self;
