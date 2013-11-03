@@ -26,7 +26,7 @@
 
 + (double)uniformMin:(double)min max:(double)max
 {
-    return [self uniform:(max - min)] - min;
+    return min + [self uniform:(max - min)];
 }
 
 

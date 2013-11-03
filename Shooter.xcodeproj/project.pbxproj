@@ -22,23 +22,15 @@
 		5A3BD4FF182634BE008357AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4D7182634BE008357AE /* Foundation.framework */; };
 		5A3BD500182634BE008357AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4DB182634BE008357AE /* UIKit.framework */; };
 		5A3BD508182634BE008357AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD506182634BE008357AE /* InfoPlist.strings */; };
-		5A3BD50A182634BE008357AE /* ShooterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD509182634BE008357AE /* ShooterTests.m */; };
 		5A3BD51518263938008357AE /* flame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51318263938008357AE /* flame.sks */; };
 		5A3BD51618263938008357AE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51418263938008357AE /* spark.png */; };
 		5A3BD51C182640A4008357AE /* SKEmitterNode+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD51B182640A4008357AE /* SKEmitterNode+Util.m */; };
 		5A3BD5201826433A008357AE /* snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51F1826433A008357AE /* snow.sks */; };
 		5A3BD5231826648B008357AE /* Rng.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD5221826648B008357AE /* Rng.m */; };
+		5A3BD526182668B1008357AE /* SnowMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD525182668B1008357AE /* SnowMachine.m */; };
+		5A3BD52818266E61008357AE /* RngTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD52718266E61008357AE /* RngTests.m */; };
+		5A3BD52918266E7E008357AE /* Rng.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD5221826648B008357AE /* Rng.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5A3BD501182634BE008357AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5A3BD4CC182634BE008357AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A3BD4D3182634BE008357AE;
-			remoteInfo = Shooter;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5A3BD4D4182634BE008357AE /* Shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +54,6 @@
 		5A3BD4FD182634BE008357AE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5A3BD505182634BE008357AE /* ShooterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShooterTests-Info.plist"; sourceTree = "<group>"; };
 		5A3BD507182634BE008357AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5A3BD509182634BE008357AE /* ShooterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShooterTests.m; sourceTree = "<group>"; };
 		5A3BD51318263938008357AE /* flame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = flame.sks; sourceTree = "<group>"; };
 		5A3BD51418263938008357AE /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		5A3BD51A182640A4008357AE /* SKEmitterNode+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKEmitterNode+Util.h"; sourceTree = "<group>"; };
@@ -70,6 +61,9 @@
 		5A3BD51F1826433A008357AE /* snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snow.sks; sourceTree = "<group>"; };
 		5A3BD5211826648B008357AE /* Rng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rng.h; sourceTree = "<group>"; };
 		5A3BD5221826648B008357AE /* Rng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rng.m; sourceTree = "<group>"; };
+		5A3BD524182668B1008357AE /* SnowMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowMachine.h; sourceTree = "<group>"; };
+		5A3BD525182668B1008357AE /* SnowMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowMachine.m; sourceTree = "<group>"; };
+		5A3BD52718266E61008357AE /* RngTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RngTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +147,7 @@
 		5A3BD503182634BE008357AE /* ShooterTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A3BD509182634BE008357AE /* ShooterTests.m */,
+				5A3BD52718266E61008357AE /* RngTests.m */,
 				5A3BD504182634BE008357AE /* Supporting Files */,
 			);
 			path = ShooterTests;
@@ -189,6 +183,8 @@
 				5A3BD4EF182634BE008357AE /* ViewController.m */,
 				5A3BD4F1182634BE008357AE /* MyScene.h */,
 				5A3BD4F2182634BE008357AE /* MyScene.m */,
+				5A3BD524182668B1008357AE /* SnowMachine.h */,
+				5A3BD525182668B1008357AE /* SnowMachine.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -235,7 +231,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5A3BD502182634BE008357AE /* PBXTargetDependency */,
 			);
 			name = ShooterTests;
 			productName = ShooterTests;
@@ -304,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3BD526182668B1008357AE /* SnowMachine.m in Sources */,
 				5A3BD51C182640A4008357AE /* SKEmitterNode+Util.m in Sources */,
 				5A3BD4F3182634BE008357AE /* MyScene.m in Sources */,
 				5A3BD4F0182634BE008357AE /* ViewController.m in Sources */,
@@ -317,19 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A3BD50A182634BE008357AE /* ShooterTests.m in Sources */,
+				5A3BD52818266E61008357AE /* RngTests.m in Sources */,
+				5A3BD52918266E7E008357AE /* Rng.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5A3BD502182634BE008357AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5A3BD4D3182634BE008357AE /* Shooter */;
-			targetProxy = 5A3BD501182634BE008357AE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5A3BD4E2182634BE008357AE /* InfoPlist.strings */ = {
@@ -463,7 +452,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Shooter.app/Shooter";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -477,7 +465,6 @@
 				);
 				INFOPLIST_FILE = "ShooterTests/ShooterTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -486,7 +473,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Shooter.app/Shooter";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -496,7 +482,6 @@
 				GCC_PREFIX_HEADER = "Shooter/Shooter-Prefix.pch";
 				INFOPLIST_FILE = "ShooterTests/ShooterTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
