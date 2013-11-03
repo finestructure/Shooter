@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+extern const uint32_t WallCategory;
 extern const uint32_t FlameCategory;
 extern const uint32_t SnowCategory;
 

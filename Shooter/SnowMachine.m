@@ -46,8 +46,8 @@
 {
     node.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:node.size.width/2];
     node.physicsBody.categoryBitMask = SnowCategory;
-    node.physicsBody.collisionBitMask = 0;
-    node.physicsBody.contactTestBitMask = SnowCategory | FlameCategory;
+    node.physicsBody.collisionBitMask = WallCategory;
+    node.physicsBody.contactTestBitMask = SnowCategory | FlameCategory | WallCategory;
 }
 
 
