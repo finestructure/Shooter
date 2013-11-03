@@ -30,6 +30,8 @@
 		5A3BD526182668B1008357AE /* SnowMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD525182668B1008357AE /* SnowMachine.m */; };
 		5A3BD52818266E61008357AE /* RngTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD52718266E61008357AE /* RngTests.m */; };
 		5A3BD52918266E7E008357AE /* Rng.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD5221826648B008357AE /* Rng.m */; };
+		5A94A30818267E2F0035BA0D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30718267E2F0035BA0D /* Constants.m */; };
+		5A94A30918267E2F0035BA0D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30718267E2F0035BA0D /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		5A3BD524182668B1008357AE /* SnowMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowMachine.h; sourceTree = "<group>"; };
 		5A3BD525182668B1008357AE /* SnowMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowMachine.m; sourceTree = "<group>"; };
 		5A3BD52718266E61008357AE /* RngTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RngTests.m; sourceTree = "<group>"; };
+		5A94A30618267E2F0035BA0D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		5A94A30718267E2F0035BA0D /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 				5A3BD4F2182634BE008357AE /* MyScene.m */,
 				5A3BD524182668B1008357AE /* SnowMachine.h */,
 				5A3BD525182668B1008357AE /* SnowMachine.m */,
+				5A94A30618267E2F0035BA0D /* Constants.h */,
+				5A94A30718267E2F0035BA0D /* Constants.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 				5A3BD526182668B1008357AE /* SnowMachine.m in Sources */,
 				5A3BD51C182640A4008357AE /* SKEmitterNode+Util.m in Sources */,
 				5A3BD4F3182634BE008357AE /* MyScene.m in Sources */,
+				5A94A30818267E2F0035BA0D /* Constants.m in Sources */,
 				5A3BD4F0182634BE008357AE /* ViewController.m in Sources */,
 				5A3BD5231826648B008357AE /* Rng.m in Sources */,
 				5A3BD4EA182634BE008357AE /* AppDelegate.m in Sources */,
@@ -315,6 +322,7 @@
 			files = (
 				5A3BD52818266E61008357AE /* RngTests.m in Sources */,
 				5A3BD52918266E7E008357AE /* Rng.m in Sources */,
+				5A94A30918267E2F0035BA0D /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +513,7 @@
 				5A3BD50F182634BE008357AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A3BD510182634BE008357AE /* Build configuration list for PBXNativeTarget "ShooterTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +522,7 @@
 				5A3BD512182634BE008357AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

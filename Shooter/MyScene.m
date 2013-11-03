@@ -8,6 +8,7 @@
 
 #import "MyScene.h"
 
+#import "Constants.h"
 #import "SKEmitterNode+Util.h"
 #import "SnowMachine.h"
 
@@ -29,18 +30,52 @@ static const CGFloat SnowInitialBirthRate = 20;
         { // flame
             _flame = [SKEmitterNode emitterNodeWithParticleFileNamed:@"flame"];
             _flame.position = CGPointMake(CGRectGetMidX(self.frame), FlameYOffset);
+            _flame.physicsBody.categoryBitMask = FlameCategory;
+            _flame.physicsBody.collisionBitMask = 0;
+            _flame.physicsBody.contactTestBitMask = SnowCategory;
             [self addChild:_flame];
         }
 
         { // snow
-            for (int i = 0; i < 100; ++i) {
+            for (int i = 0; i < 50; ++i) {
                 SKNode *n = [SnowMachine createSnowFlakeInFrame:self.frame];
                 [self addChild:n];
             }
         }
+
+        self.physicsWorld.contactDelegate = self;
+
     }
     return self;
 }
+
+
+#pragma mark - SKPhysicsContactDelegate
+
+
+- (void)didBeginContact:(SKPhysicsContact *)contact
+{
+//    SKPhysicsBody *firstBody, *secondBody;
+//
+//    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
+//    {
+//        firstBody = contact.bodyA;
+//        secondBody = contact.bodyB;
+//    }
+//    else
+//    {
+//        firstBody = contact.bodyB;
+//        secondBody = contact.bodyA;
+//    }
+//    if ((firstBody.categoryBitMask & missileCategory) != 0)
+//    {
+//        [self attack: secondBody.node withMissile:firstBody.node];
+//    }
+
+}
+
+
+#pragma mark - Touches
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

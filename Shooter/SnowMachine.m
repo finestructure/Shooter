@@ -8,6 +8,7 @@
 
 #import "SnowMachine.h"
 
+#import "Constants.h"
 #import "Rng.h"
 
 
@@ -32,11 +33,21 @@
     CGPoint end = CGPointMake(x, 0);
 
     SKSpriteNode *n = [SKSpriteNode spriteNodeWithImageNamed:@"spark.png"];
+    [self setupPhysics:n];
     n.position = start;
     n.size = CGSizeMake(n.size.width*scale, n.size.height*scale);
     SKAction *a = [SKAction moveTo:end duration:time];
     [n runAction:a];
     return n;
+}
+
+
++ (void)setupPhysics:(SKSpriteNode *)node
+{
+    node.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:node.size.width/2];
+    node.physicsBody.categoryBitMask = SnowCategory;
+    node.physicsBody.collisionBitMask = 0;
+    node.physicsBody.contactTestBitMask = SnowCategory | FlameCategory;
 }
 
 
