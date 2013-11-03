@@ -16,12 +16,18 @@
 
 + (SKNode *)createSnowFlakeInFrame:(CGRect)frame
 {
-    CGFloat time = 2;
-    CGPoint start = CGPointMake(CGRectGetMidX(frame), frame.size.height-10);
-    CGFloat angleRange = 12*M_PI/180;
-    CGFloat scale = 0.2;
+    CGVector timeRange = CGVectorMake(2, 4);
+    CGVector scaleRange = CGVectorMake(0.15, 0.4);
+    CGVector xRange = CGVectorMake(0, frame.size.width);
+    CGFloat openingAngle = 12*M_PI/180;
+    CGVector angleRange = CGVectorMake(-openingAngle, openingAngle);
 
-    CGFloat angle = [Rng uniformMin:-angleRange max:angleRange];
+    CGFloat time = [Rng uniformRange:timeRange];
+    CGFloat scale = [Rng uniformRange:scaleRange];
+    CGFloat startX = [Rng uniformRange:xRange];
+    CGFloat angle = [Rng uniformRange:angleRange];
+
+    CGPoint start = CGPointMake(startX, frame.size.height+10);
     CGFloat x = frame.size.height * tan(angle) + start.x;
     CGPoint end = CGPointMake(x, 0);
 

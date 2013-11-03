@@ -30,4 +30,10 @@
 }
 
 
++ (double)uniformRange:(CGVector)range
+{
+    return [self uniformMin:range.dx max:range.dy];
+}
+
+
 @end

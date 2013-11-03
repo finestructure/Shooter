@@ -13,5 +13,6 @@
 + (double)uniform;
 + (double)uniform:(double)max;
 + (double)uniformMin:(double)min max:(double)max;
++ (double)uniformRange:(CGVector)range;
 
 @end
