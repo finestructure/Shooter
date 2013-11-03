@@ -10,12 +10,13 @@
 
 #import "Constants.h"
 #import "Rng.h"
+#import "Snowflake.h"
 
 
 @implementation SnowMachine
 
 
-+ (SKNode *)createSnowFlakeInFrame:(CGRect)frame
++ (Snowflake *)createSnowFlakeInFrame:(CGRect)frame
 {
     CGVector timeRange = CGVectorMake(2, 4);
     CGVector scaleRange = CGVectorMake(0.15, 0.4);
@@ -32,7 +33,7 @@
     CGFloat x = frame.size.height * tan(angle) + start.x;
     CGPoint end = CGPointMake(x, 0);
 
-    SKSpriteNode *n = [SKSpriteNode spriteNodeWithImageNamed:@"spark.png"];
+    Snowflake *n = [Snowflake spriteNodeWithImageNamed:@"spark.png"];
     [self setupPhysics:n];
     n.position = start;
     n.size = CGSizeMake(n.size.width*scale, n.size.height*scale);

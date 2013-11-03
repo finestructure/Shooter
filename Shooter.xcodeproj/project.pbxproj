@@ -32,6 +32,8 @@
 		5A3BD52918266E7E008357AE /* Rng.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD5221826648B008357AE /* Rng.m */; };
 		5A94A30818267E2F0035BA0D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30718267E2F0035BA0D /* Constants.m */; };
 		5A94A30918267E2F0035BA0D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30718267E2F0035BA0D /* Constants.m */; };
+		5A94A30D1826B5C20035BA0D /* Snowflake.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30C1826B5C20035BA0D /* Snowflake.m */; };
+		5A94A30E1826B5C20035BA0D /* Snowflake.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30C1826B5C20035BA0D /* Snowflake.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		5A3BD52718266E61008357AE /* RngTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RngTests.m; sourceTree = "<group>"; };
 		5A94A30618267E2F0035BA0D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5A94A30718267E2F0035BA0D /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		5A94A30B1826B5C20035BA0D /* Snowflake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snowflake.h; sourceTree = "<group>"; };
+		5A94A30C1826B5C20035BA0D /* Snowflake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snowflake.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 		5A3BD51818263E1E008357AE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5A94A30A1826B5980035BA0D /* Nodes */,
 				5A3BD4E8182634BE008357AE /* AppDelegate.h */,
 				5A3BD4E9182634BE008357AE /* AppDelegate.m */,
 				5A3BD4EE182634BE008357AE /* ViewController.h */,
@@ -204,6 +209,15 @@
 				5A3BD5221826648B008357AE /* Rng.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		5A94A30A1826B5980035BA0D /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				5A94A30B1826B5C20035BA0D /* Snowflake.h */,
+				5A94A30C1826B5C20035BA0D /* Snowflake.m */,
+			);
+			name = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +321,7 @@
 			files = (
 				5A3BD526182668B1008357AE /* SnowMachine.m in Sources */,
 				5A3BD51C182640A4008357AE /* SKEmitterNode+Util.m in Sources */,
+				5A94A30D1826B5C20035BA0D /* Snowflake.m in Sources */,
 				5A3BD4F3182634BE008357AE /* MyScene.m in Sources */,
 				5A94A30818267E2F0035BA0D /* Constants.m in Sources */,
 				5A3BD4F0182634BE008357AE /* ViewController.m in Sources */,
@@ -320,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A94A30E1826B5C20035BA0D /* Snowflake.m in Sources */,
 				5A3BD52818266E61008357AE /* RngTests.m in Sources */,
 				5A3BD52918266E7E008357AE /* Rng.m in Sources */,
 				5A94A30918267E2F0035BA0D /* Constants.m in Sources */,

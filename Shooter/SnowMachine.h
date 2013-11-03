@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SpriteKit/SpriteKit.h>
+
+
+@class Snowflake;
 
 @interface SnowMachine : NSObject
 
-+ (SKNode *)createSnowFlakeInFrame:(CGRect)frame;
++ (Snowflake *)createSnowFlakeInFrame:(CGRect)frame;
 
 @end

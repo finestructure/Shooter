@@ -106,10 +106,6 @@ static const CGFloat SnowInitialBirthRate = 20;
     dispatch_once(&onceToken, ^{
         startTime = currentTime;
     });
-    // scale the snow birthrate with the current time
-    CFTimeInterval newBirthRate = SnowInitialBirthRate + (currentTime - startTime);
-//    NSLog(@"br: %.1f", newBirthRate);
-//    _snow.particleBirthRate = newBirthRate;
 }
 
 
