@@ -26,6 +26,7 @@
 		5A3BD50A182634BE008357AE /* ShooterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD509182634BE008357AE /* ShooterTests.m */; };
 		5A3BD51518263938008357AE /* Flame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51318263938008357AE /* Flame.sks */; };
 		5A3BD51618263938008357AE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51418263938008357AE /* spark.png */; };
+		5A3BD51C182640A4008357AE /* SKEmitterNode+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD51B182640A4008357AE /* SKEmitterNode+Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		5A3BD509182634BE008357AE /* ShooterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShooterTests.m; sourceTree = "<group>"; };
 		5A3BD51318263938008357AE /* Flame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Flame.sks; sourceTree = "<group>"; };
 		5A3BD51418263938008357AE /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		5A3BD51A182640A4008357AE /* SKEmitterNode+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKEmitterNode+Util.h"; sourceTree = "<group>"; };
+		5A3BD51B182640A4008357AE /* SKEmitterNode+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKEmitterNode+Util.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,7 @@
 			children = (
 				5A3BD51818263E1E008357AE /* Classes */,
 				5A3BD51718263E02008357AE /* Resources */,
+				5A3BD5191826406C008357AE /* Helpers */,
 				5A3BD4E0182634BE008357AE /* Supporting Files */,
 			);
 			path = Shooter;
@@ -184,6 +188,15 @@
 				5A3BD4F2182634BE008357AE /* MyScene.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		5A3BD5191826406C008357AE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5A3BD51A182640A4008357AE /* SKEmitterNode+Util.h */,
+				5A3BD51B182640A4008357AE /* SKEmitterNode+Util.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3BD51C182640A4008357AE /* SKEmitterNode+Util.m in Sources */,
 				5A3BD4F3182634BE008357AE /* MyScene.m in Sources */,
 				5A3BD4F0182634BE008357AE /* ViewController.m in Sources */,
 				5A3BD4EA182634BE008357AE /* AppDelegate.m in Sources */,
