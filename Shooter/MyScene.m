@@ -8,8 +8,8 @@
 
 #import "MyScene.h"
 
-#import "Rng.h"
 #import "SKEmitterNode+Util.h"
+#import "SnowMachine.h"
 
 
 static const CGFloat FlameYOffset = 100;
@@ -33,22 +33,22 @@ static const CGFloat SnowInitialBirthRate = 20;
         }
 
         { // snow
-            CGFloat time = 2;
-            CGPoint start = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height-10);
-            CGFloat angleRange = 12*M_PI/180;
-
-            CGFloat angle = [Rng uniformMin:-angleRange max:angleRange];
-            CGFloat x = self.frame.size.height * tan(angle);
-            CGPoint end = CGPointMake(x, 0);
-
-            SKSpriteNode *n = [SKSpriteNode spriteNodeWithImageNamed:@"spark.png"];
-            n.position = start;
-            SKAction *a = [SKAction moveTo:end duration:time];
-            [n runAction:a];
-            [self addChild:n];
+            for (int i = 0; i < 100; ++i) {
+                SKNode *n = [SnowMachine createSnowFlakeInFrame:self.frame];
+                [self addChild:n];
+            }
         }
     }
     return self;
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    for (int i = 0; i < 100; ++i) {
+        SKNode *n = [SnowMachine createSnowFlakeInFrame:self.frame];
+        [self addChild:n];
+    }
 }
 
 
