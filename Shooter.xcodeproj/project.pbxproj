@@ -24,6 +24,8 @@
 		5A3BD500182634BE008357AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4DB182634BE008357AE /* UIKit.framework */; };
 		5A3BD508182634BE008357AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD506182634BE008357AE /* InfoPlist.strings */; };
 		5A3BD50A182634BE008357AE /* ShooterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD509182634BE008357AE /* ShooterTests.m */; };
+		5A3BD51518263938008357AE /* Flame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51318263938008357AE /* Flame.sks */; };
+		5A3BD51618263938008357AE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51418263938008357AE /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		5A3BD505182634BE008357AE /* ShooterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShooterTests-Info.plist"; sourceTree = "<group>"; };
 		5A3BD507182634BE008357AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5A3BD509182634BE008357AE /* ShooterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShooterTests.m; sourceTree = "<group>"; };
+		5A3BD51318263938008357AE /* Flame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Flame.sks; sourceTree = "<group>"; };
+		5A3BD51418263938008357AE /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				5A3BD4F1182634BE008357AE /* MyScene.h */,
 				5A3BD4F2182634BE008357AE /* MyScene.m */,
 				5A3BD4F4182634BE008357AE /* Spaceship.png */,
+				5A3BD51318263938008357AE /* Flame.sks */,
+				5A3BD51418263938008357AE /* spark.png */,
 				5A3BD4F6182634BE008357AE /* Images.xcassets */,
 				5A3BD4E0182634BE008357AE /* Supporting Files */,
 			);
@@ -240,6 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3BD51518263938008357AE /* Flame.sks in Resources */,
+				5A3BD51618263938008357AE /* spark.png in Resources */,
 				5A3BD4E4182634BE008357AE /* InfoPlist.strings in Resources */,
 				5A3BD4F7182634BE008357AE /* Images.xcassets in Resources */,
 				5A3BD4F5182634BE008357AE /* Spaceship.png in Resources */,
