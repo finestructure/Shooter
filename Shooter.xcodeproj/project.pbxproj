@@ -17,16 +17,16 @@
 		5A3BD4ED182634BE008357AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD4EB182634BE008357AE /* Main.storyboard */; };
 		5A3BD4F0182634BE008357AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD4EF182634BE008357AE /* ViewController.m */; };
 		5A3BD4F3182634BE008357AE /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD4F2182634BE008357AE /* MyScene.m */; };
-		5A3BD4F5182634BE008357AE /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD4F4182634BE008357AE /* Spaceship.png */; };
 		5A3BD4F7182634BE008357AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD4F6182634BE008357AE /* Images.xcassets */; };
 		5A3BD4FE182634BE008357AE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4FD182634BE008357AE /* XCTest.framework */; };
 		5A3BD4FF182634BE008357AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4D7182634BE008357AE /* Foundation.framework */; };
 		5A3BD500182634BE008357AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4DB182634BE008357AE /* UIKit.framework */; };
 		5A3BD508182634BE008357AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD506182634BE008357AE /* InfoPlist.strings */; };
 		5A3BD50A182634BE008357AE /* ShooterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD509182634BE008357AE /* ShooterTests.m */; };
-		5A3BD51518263938008357AE /* Flame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51318263938008357AE /* Flame.sks */; };
+		5A3BD51518263938008357AE /* flame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51318263938008357AE /* flame.sks */; };
 		5A3BD51618263938008357AE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51418263938008357AE /* spark.png */; };
 		5A3BD51C182640A4008357AE /* SKEmitterNode+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD51B182640A4008357AE /* SKEmitterNode+Util.m */; };
+		5A3BD5201826433A008357AE /* snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51F1826433A008357AE /* snow.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,17 +56,17 @@
 		5A3BD4EF182634BE008357AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5A3BD4F1182634BE008357AE /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		5A3BD4F2182634BE008357AE /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
-		5A3BD4F4182634BE008357AE /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		5A3BD4F6182634BE008357AE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5A3BD4FC182634BE008357AE /* ShooterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShooterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3BD4FD182634BE008357AE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5A3BD505182634BE008357AE /* ShooterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShooterTests-Info.plist"; sourceTree = "<group>"; };
 		5A3BD507182634BE008357AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5A3BD509182634BE008357AE /* ShooterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShooterTests.m; sourceTree = "<group>"; };
-		5A3BD51318263938008357AE /* Flame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Flame.sks; sourceTree = "<group>"; };
+		5A3BD51318263938008357AE /* flame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = flame.sks; sourceTree = "<group>"; };
 		5A3BD51418263938008357AE /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		5A3BD51A182640A4008357AE /* SKEmitterNode+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKEmitterNode+Util.h"; sourceTree = "<group>"; };
 		5A3BD51B182640A4008357AE /* SKEmitterNode+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKEmitterNode+Util.m"; sourceTree = "<group>"; };
+		5A3BD51F1826433A008357AE /* snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snow.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,9 +170,9 @@
 			children = (
 				5A3BD4EB182634BE008357AE /* Main.storyboard */,
 				5A3BD4F6182634BE008357AE /* Images.xcassets */,
-				5A3BD4F4182634BE008357AE /* Spaceship.png */,
-				5A3BD51318263938008357AE /* Flame.sks */,
+				5A3BD51318263938008357AE /* flame.sks */,
 				5A3BD51418263938008357AE /* spark.png */,
+				5A3BD51F1826433A008357AE /* snow.sks */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -275,11 +275,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A3BD51518263938008357AE /* Flame.sks in Resources */,
+				5A3BD51518263938008357AE /* flame.sks in Resources */,
+				5A3BD5201826433A008357AE /* snow.sks in Resources */,
 				5A3BD51618263938008357AE /* spark.png in Resources */,
 				5A3BD4E4182634BE008357AE /* InfoPlist.strings in Resources */,
 				5A3BD4F7182634BE008357AE /* Images.xcassets in Resources */,
-				5A3BD4F5182634BE008357AE /* Spaceship.png in Resources */,
 				5A3BD4ED182634BE008357AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

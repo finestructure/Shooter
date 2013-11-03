@@ -11,24 +11,35 @@
 #import "SKEmitterNode+Util.h"
 
 
-static const CGFloat FlameYOffset = 40;
+static const CGFloat FlameYOffset = 100;
+static const CGFloat SnowInitialBirthRate = 20;
 
 
 @implementation MyScene {
     SKNode *_flame;
+    SKEmitterNode *_snow;
 }
-
 
 
 -(id)initWithSize:(CGSize)size
 {
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
-        
-        _flame = [SKEmitterNode emitterNodeWithParticleFileNamed:@"Flame"];
-        _flame.position = CGPointMake(CGRectGetMidX(self.frame), FlameYOffset);
-        [self addChild:_flame];
 
+        { // flame
+            _flame = [SKEmitterNode emitterNodeWithParticleFileNamed:@"flame"];
+            _flame.position = CGPointMake(CGRectGetMidX(self.frame), FlameYOffset);
+            [self addChild:_flame];
+        }
+
+        { // snow
+            _snow = [SKEmitterNode emitterNodeWithParticleFileNamed:@"snow"];
+            _snow.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height);
+            _snow.particleBirthRate = SnowInitialBirthRate;
+            _snow.particlePositionRange = CGVectorMake(self.frame.size.width,
+                                                       _snow.particlePositionRange.dy);
+            [self addChild:_snow];
+        }
     }
     return self;
 }
@@ -45,7 +56,15 @@ static const CGFloat FlameYOffset = 40;
 
 
 -(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+    static CFTimeInterval startTime;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        startTime = currentTime;
+    });
+    // scale the snow birthrate with the current time
+    CFTimeInterval newBirthRate = SnowInitialBirthRate + (currentTime - startTime);
+//    NSLog(@"br: %.1f", newBirthRate);
+//    _snow.particleBirthRate = newBirthRate;
 }
 
 
