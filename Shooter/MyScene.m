@@ -10,6 +10,7 @@
 
 #import "CollisionHandling.h"
 #import "Constants.h"
+#import "Floor.h"
 #import "SKEmitterNode+Util.h"
 #import "Snowflake.h"
 #import "SnowMachine.h"
@@ -20,7 +21,7 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 
 @implementation MyScene {
-    SKNode *_floor;
+    Floor *_floor;
     SKNode *_flame;
 }
 
@@ -31,13 +32,7 @@ static const CGFloat SnowInitialBirthRate = 20;
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
 
         { // floor
-            CGSize size = CGSizeMake(self.frame.size.width, 50);
-            _floor = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size:size];
-            _floor.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:size];
-            _floor.physicsBody.dynamic = NO;
-            _floor.physicsBody.categoryBitMask = FloorCategory;
-            _floor.position = CGPointMake(CGRectGetMidX(self.frame), size.height/2);
-            [self addChild:_floor];
+            _floor = [Floor floorAtHeight:50 inScene:self];
         }
 
         { // flame
