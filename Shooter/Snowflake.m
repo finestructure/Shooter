@@ -29,7 +29,7 @@
 - (void)hasLanded
 {
     [self removeAllActions];
-    SKAction *fade = [SKAction fadeAlphaTo:0 duration:2];
+    SKAction *fade = [SKAction fadeOutWithDuration:2];
     SKAction *remove = [SKAction removeFromParent];
     [self runAction:[SKAction sequence:@[fade, remove]]];
 }

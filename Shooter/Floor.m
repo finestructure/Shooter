@@ -26,16 +26,14 @@
 {
     self = [super init];
     if (self) {
-        _segment = [FloorSegment floorSegmentWithRect:CGRectMake(0, 0, scene.size.width, height)];
+        // Because we will grow the segments we create them much higher than necessary and push them
+        // beyond the bottom edge. That way we don't have to resize them and avoid flickering at the bottom.
+        CGFloat negativeOffset = scene.size.height;
+        _segment = [FloorSegment floorSegmentWithRect:CGRectMake(0, -negativeOffset,
+                                                                 scene.size.width, height + negativeOffset)];
         [scene addChild:_segment];
     }
     return self;
-}
-
-
-- (void)collideWith:(SKPhysicsBody *)body
-{
-    NSLog(@"floor collision");
 }
 
 

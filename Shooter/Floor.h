@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CollisionHandling.h"
+@class SKScene;
 
-
-@interface Floor : NSObject<CollisionHandling>
+@interface Floor : NSObject
 
 + (instancetype)floorAtHeight:(CGFloat)height inScene:(SKScene *)scene;
 
