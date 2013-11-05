@@ -13,6 +13,6 @@
 
 + (instancetype)snowflakeWithScale:(CGFloat)scale;
 
-- (void)collideWith:(SKPhysicsBody *)body;
+- (void)hasLanded;
 
 @end

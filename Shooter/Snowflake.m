@@ -9,6 +9,8 @@
 #import "Snowflake.h"
 
 #import "Constants.h"
+#import "FloorSegment.h"
+
 
 @implementation Snowflake
 
@@ -23,13 +25,22 @@
     return node;
 }
 
-- (void)collideWith:(SKPhysicsBody *)body
+
+- (void)hasLanded
 {
-    NSLog(@"snowflake hit: %@", body);
     [self removeAllActions];
     SKAction *fade = [SKAction fadeAlphaTo:0 duration:2];
     SKAction *remove = [SKAction removeFromParent];
     [self runAction:[SKAction sequence:@[fade, remove]]];
+}
+
+
+- (void)collideWith:(SKPhysicsBody *)body
+{
+    NSLog(@"snowflake hit: %@", body);
+    if ([body.node isKindOfClass:[FloorSegment class]]) {
+        [(FloorSegment *)body.node collideWith:self.physicsBody];
+    }
 }
 
 @end

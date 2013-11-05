@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5A2DEB1818292ADA00B67F95 /* Floor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DEB1718292ADA00B67F95 /* Floor.m */; };
 		5A2DEB1918292ADA00B67F95 /* Floor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DEB1718292ADA00B67F95 /* Floor.m */; };
+		5A2DEB1C18292FCB00B67F95 /* FloorSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DEB1B18292FCB00B67F95 /* FloorSegment.m */; };
+		5A2DEB1D18292FCB00B67F95 /* FloorSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DEB1B18292FCB00B67F95 /* FloorSegment.m */; };
 		5A3BD4D8182634BE008357AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4D7182634BE008357AE /* Foundation.framework */; };
 		5A3BD4DA182634BE008357AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4D9182634BE008357AE /* CoreGraphics.framework */; };
 		5A3BD4DC182634BE008357AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4DB182634BE008357AE /* UIKit.framework */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		5A2DEB1618292ADA00B67F95 /* Floor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Floor.h; sourceTree = "<group>"; };
 		5A2DEB1718292ADA00B67F95 /* Floor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Floor.m; sourceTree = "<group>"; };
+		5A2DEB1A18292FCB00B67F95 /* FloorSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorSegment.h; sourceTree = "<group>"; };
+		5A2DEB1B18292FCB00B67F95 /* FloorSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorSegment.m; sourceTree = "<group>"; };
 		5A3BD4D4182634BE008357AE /* Shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3BD4D7182634BE008357AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A3BD4D9182634BE008357AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -224,6 +228,8 @@
 				5A94A30F1826B8530035BA0D /* CollisionHandling.h */,
 				5A2DEB1618292ADA00B67F95 /* Floor.h */,
 				5A2DEB1718292ADA00B67F95 /* Floor.m */,
+				5A2DEB1A18292FCB00B67F95 /* FloorSegment.h */,
+				5A2DEB1B18292FCB00B67F95 /* FloorSegment.m */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 				5A3BD526182668B1008357AE /* SnowMachine.m in Sources */,
 				5A3BD51C182640A4008357AE /* SKEmitterNode+Util.m in Sources */,
 				5A94A30D1826B5C20035BA0D /* Snowflake.m in Sources */,
+				5A2DEB1C18292FCB00B67F95 /* FloorSegment.m in Sources */,
 				5A3BD4F3182634BE008357AE /* MyScene.m in Sources */,
 				5A94A30818267E2F0035BA0D /* Constants.m in Sources */,
 				5A3BD4F0182634BE008357AE /* ViewController.m in Sources */,
@@ -346,6 +353,7 @@
 			files = (
 				5A94A30E1826B5C20035BA0D /* Snowflake.m in Sources */,
 				5A3BD52818266E61008357AE /* RngTests.m in Sources */,
+				5A2DEB1D18292FCB00B67F95 /* FloorSegment.m in Sources */,
 				5A3BD52918266E7E008357AE /* Rng.m in Sources */,
 				5A2DEB1918292ADA00B67F95 /* Floor.m in Sources */,
 				5A94A30918267E2F0035BA0D /* Constants.m in Sources */,
