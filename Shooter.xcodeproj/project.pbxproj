@@ -72,6 +72,7 @@
 		5A94A30718267E2F0035BA0D /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		5A94A30B1826B5C20035BA0D /* Snowflake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snowflake.h; sourceTree = "<group>"; };
 		5A94A30C1826B5C20035BA0D /* Snowflake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snowflake.m; sourceTree = "<group>"; };
+		5A94A30F1826B8530035BA0D /* CollisionHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionHandling.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +217,7 @@
 			children = (
 				5A94A30B1826B5C20035BA0D /* Snowflake.h */,
 				5A94A30C1826B5C20035BA0D /* Snowflake.m */,
+				5A94A30F1826B8530035BA0D /* CollisionHandling.h */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";

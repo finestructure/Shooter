@@ -10,4 +10,9 @@
 
 @implementation Snowflake
 
+- (void)collideWith:(SKPhysicsBody *)body
+{
+    NSLog(@"snowflake hit: %@", body);
+}
+
 @end

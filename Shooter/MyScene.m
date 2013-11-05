@@ -8,8 +8,10 @@
 
 #import "MyScene.h"
 
+#import "CollisionHandling.h"
 #import "Constants.h"
 #import "SKEmitterNode+Util.h"
+#import "Snowflake.h"
 #import "SnowMachine.h"
 
 
@@ -40,7 +42,7 @@ static const CGFloat SnowInitialBirthRate = 20;
 
         { // snowflakes
             for (int i = 0; i < 50; ++i) {
-                SKNode *n = [SnowMachine createSnowFlakeInFrame:self.frame];
+                Snowflake *n = [SnowMachine createSnowFlakeInFrame:self.frame];
                 [self addChild:n];
             }
         }
@@ -58,23 +60,16 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
-//    SKPhysicsBody *firstBody, *secondBody;
-//
-//    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
-//    {
-//        firstBody = contact.bodyA;
-//        secondBody = contact.bodyB;
-//    }
-//    else
-//    {
-//        firstBody = contact.bodyB;
-//        secondBody = contact.bodyA;
-//    }
-//    if ((firstBody.categoryBitMask & missileCategory) != 0)
-//    {
-//        [self attack: secondBody.node withMissile:firstBody.node];
-//    }
-
+    SKNode *nodeA = contact.bodyA.node;
+    SKNode *nodeB = contact.bodyB.node;
+    if ([nodeA respondsToSelector:@selector(collideWith:)]) {
+        [(id<CollisionHandling>)nodeA collideWith:contact.bodyB];
+    } else if ([nodeB respondsToSelector:@selector(collideWith:)]) {
+        [(id<CollisionHandling>)nodeB collideWith:contact.bodyA];
+    } else {
+        // we just handle bodyA - if bodyB is not supported it will be dealt with in collideWith:
+        NSAssert(NO, @"body does not support collisions: %@", contact.bodyA);
+    }
 }
 
 
