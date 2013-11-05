@@ -22,11 +22,13 @@ static const CGFloat DampeningFactory = 0.8;
 
 + (instancetype)floorSegmentWithRect:(CGRect)rect
 {
-    FloorSegment *segment = [FloorSegment spriteNodeWithColor:[UIColor whiteColor] size:rect.size];
+    FloorSegment *segment = [[FloorSegment alloc] init];
     segment.position = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
+
     segment.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:rect.size];
     segment.physicsBody.dynamic = NO;
     segment.physicsBody.categoryBitMask = FloorCategory;
+
     return segment;
 }
 
@@ -54,11 +56,11 @@ static const CGFloat DampeningFactory = 0.8;
 }
 
 
-- (void)growBy:(CGFloat)groth
+- (void)growBy:(CGFloat)growth
 {
     if (! [self hasActions]) {
         NSTimeInterval duration = 0.1;
-        SKAction *move = [SKAction moveByX:0 y:groth duration:duration];
+        SKAction *move = [SKAction moveByX:0 y:growth duration:duration];
         [self runAction:move];
     }
 }

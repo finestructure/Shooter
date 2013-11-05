@@ -10,7 +10,7 @@
 #import "CollisionHandling.h"
 
 
-@interface FloorSegment : SKSpriteNode<CollisionHandling>
+@interface FloorSegment : SKNode<CollisionHandling>
 
 + (instancetype)floorSegmentWithRect:(CGRect)rect;
 
