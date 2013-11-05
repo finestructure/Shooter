@@ -9,7 +9,7 @@
 #import "Constants.h"
 
 
-const uint32_t WallCategory   =  0x1 << 0;
+const uint32_t FloorCategory  =  0x1 << 0;
 const uint32_t FlameCategory  =  0x1 << 1;
 const uint32_t SnowCategory   =  0x1 << 2;
 

@@ -32,7 +32,7 @@ static const CGFloat SnowInitialBirthRate = 20;
         self.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 0)
                                                         toPoint:CGPointMake(self.frame.size.width, 0)];
         self.physicsBody.dynamic = NO;
-        self.physicsBody.categoryBitMask = WallCategory;
+        self.physicsBody.categoryBitMask = FloorCategory;
 
         { // flame
             _flame = [SKEmitterNode emitterNodeWithParticleFileNamed:@"flame"];
@@ -41,7 +41,7 @@ static const CGFloat SnowInitialBirthRate = 20;
         }
 
         { // snowflakes
-            for (int i = 0; i < 50; ++i) {
+            for (int i = 0; i < 5; ++i) {
                 Snowflake *n = [SnowMachine createSnowFlakeInFrame:self.frame];
                 [self addChild:n];
             }
