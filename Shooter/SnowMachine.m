@@ -15,7 +15,7 @@
 
 static const CGFloat InitialFlakesPerSecond = 5;
 static const CGFloat IncreasePerSecond = 4;
-static const NSUInteger ChildCountThrottleLimit = 400;
+static const NSUInteger ChildCountThrottleLimit = 500;
 
 
 @interface SnowMachine ()
