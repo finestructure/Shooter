@@ -223,9 +223,9 @@
 		5A94A30A1826B5980035BA0D /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				5A94A30F1826B8530035BA0D /* CollisionHandling.h */,
 				5A94A30B1826B5C20035BA0D /* Snowflake.h */,
 				5A94A30C1826B5C20035BA0D /* Snowflake.m */,
-				5A94A30F1826B8530035BA0D /* CollisionHandling.h */,
 				5A2DEB1618292ADA00B67F95 /* Floor.h */,
 				5A2DEB1718292ADA00B67F95 /* Floor.m */,
 				5A2DEB1A18292FCB00B67F95 /* FloorSegment.h */,

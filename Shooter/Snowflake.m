@@ -29,6 +29,7 @@
 - (void)hasLanded
 {
     [self removeAllActions];
+    self.physicsBody = nil;
     SKAction *fade = [SKAction fadeOutWithDuration:1];
     SKAction *remove = [SKAction removeFromParent];
     [self runAction:[SKAction sequence:@[fade, remove]]];

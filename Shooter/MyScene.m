@@ -71,10 +71,17 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSUInteger count = 10;
-    for (int i = 0; i < count; ++i) {
-        SKNode *n = [SnowMachine createSnowFlakeInFrame:self.frame];
-        [self addChild:n];
+    static BOOL firstTouch = YES;
+
+    if (firstTouch) {
+        [SnowMachine startInScene:self];
+        firstTouch = NO;
+    } else {
+        NSUInteger count = 10;
+        for (int i = 0; i < count; ++i) {
+            SKNode *n = [SnowMachine createSnowFlakeInScene:self];
+            [self addChild:n];
+        }
     }
 }
 

@@ -10,9 +10,12 @@
 
 
 @class Snowflake;
+@class SKScene;
 
 @interface SnowMachine : NSObject
 
-+ (Snowflake *)createSnowFlakeInFrame:(CGRect)frame;
++ (void)startInScene:(SKScene *)scene;
+
++ (Snowflake *)createSnowFlakeInScene:(SKScene *)scene;
 
 @end
