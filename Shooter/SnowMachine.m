@@ -69,10 +69,12 @@ static const NSUInteger ChildCountThrottleLimit = 200;
             if (self.scene.children.count < ChildCountThrottleLimit) {
                 SKNode *n = [SnowMachine createSnowFlakeInScene:self.scene];
                 [self.scene addChild:n];
+            } else {
+                flakesPerSecond -= 1;
             }
         });
     }
-    if (self.scene.children.count < ChildCountThrottleLimit && flakesPerSecond < 20) {
+    if (self.scene.children.count < ChildCountThrottleLimit) {
         flakesPerSecond += IncreasePerSecond;
     }
 }
@@ -97,8 +99,9 @@ static const NSUInteger ChildCountThrottleLimit = 200;
 
     Snowflake *n = [Snowflake snowflakeWithScale:scale];
     n.position = start;
-    SKAction *a = [SKAction moveTo:end duration:time];
-    [n runAction:a];
+    SKAction *move = [SKAction moveTo:end duration:time];
+    SKAction *remove = [SKAction removeFromParent];
+    [n runAction:[SKAction sequence:@[move, remove]]];
     return n;
 }
 
