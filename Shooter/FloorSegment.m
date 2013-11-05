@@ -12,6 +12,12 @@
 #import "Snowflake.h"
 
 
+static const CGFloat GrowthBase = 0.5;
+static const CGFloat GrowthSizeFraction = 1/40;
+static const int GrowthSpread = 6;
+static const CGFloat DampeningFactory = 0.8;
+
+
 @implementation FloorSegment
 
 + (instancetype)floorSegmentWithRect:(CGRect)rect
@@ -31,21 +37,30 @@
         Snowflake *flake = (Snowflake *)body.node;
         [flake hasLanded];
 
-        CGFloat growth = flake.size.height/20;
+        CGFloat growth = GrowthBase + flake.size.height * GrowthSizeFraction;
         [self growBy:growth];
-        [self.previous growBy:growth/2];
-        [self.previous.previous growBy:growth/3];
-        [self.next growBy:growth/2];
-        [self.next.next growBy:growth/3];
+
+        // spread the growth to adjacent segments to get a smoother distribution
+        FloorSegment *prev = self.previous;
+        FloorSegment *next = self.next;
+        for (int i = 0; i < GrowthSpread; ++i) {
+            growth *= DampeningFactory;
+            [prev growBy:growth];
+            [next growBy:growth];
+            prev = prev.previous;
+            next = next.next;
+        }
     }
 }
 
 
 - (void)growBy:(CGFloat)groth
 {
-    NSTimeInterval duration = 0.1;
-    SKAction *move = [SKAction moveByX:0 y:groth duration:duration];
-    [self runAction:move];
+    if (! [self hasActions]) {
+        NSTimeInterval duration = 0.1;
+        SKAction *move = [SKAction moveByX:0 y:groth duration:duration];
+        [self runAction:move];
+    }
 }
 
 
