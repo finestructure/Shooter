@@ -11,6 +11,8 @@
 
 @interface Snowflake : SKSpriteNode <CollisionHandling>
 
++ (instancetype)snowflakeWithScale:(CGFloat)scale;
+
 - (void)collideWith:(SKPhysicsBody *)body;
 
 @end

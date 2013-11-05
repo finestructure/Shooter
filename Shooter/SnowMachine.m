@@ -33,22 +33,11 @@
     CGFloat x = frame.size.height * tan(angle) + start.x;
     CGPoint end = CGPointMake(x, 0);
 
-    Snowflake *n = [Snowflake spriteNodeWithImageNamed:@"spark.png"];
-    [self setupPhysics:n];
+    Snowflake *n = [Snowflake snowflakeWithScale:scale];
     n.position = start;
-    n.size = CGSizeMake(n.size.width*scale, n.size.height*scale);
     SKAction *a = [SKAction moveTo:end duration:time];
     [n runAction:a];
     return n;
-}
-
-
-+ (void)setupPhysics:(SKSpriteNode *)node
-{
-    node.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:node.size.width/2];
-    node.physicsBody.categoryBitMask = SnowCategory;
-    node.physicsBody.collisionBitMask = FloorCategory;
-    node.physicsBody.contactTestBitMask = FlameCategory | FloorCategory;
 }
 
 
