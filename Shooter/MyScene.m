@@ -20,6 +20,7 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 
 @implementation MyScene {
+    SKNode *_floor;
     SKNode *_flame;
 }
 
@@ -29,10 +30,15 @@ static const CGFloat SnowInitialBirthRate = 20;
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
 
-        self.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 0)
-                                                        toPoint:CGPointMake(self.frame.size.width, 0)];
-        self.physicsBody.dynamic = NO;
-        self.physicsBody.categoryBitMask = FloorCategory;
+        { // floor
+            CGSize size = CGSizeMake(self.frame.size.width, 1);
+            _floor = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size:size];
+            _floor.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:size];
+            _floor.physicsBody.dynamic = NO;
+            _floor.physicsBody.categoryBitMask = FloorCategory;
+            _floor.position = CGPointMake(CGRectGetMidX(self.frame), 40);
+            [self addChild:_floor];
+        }
 
         { // flame
             _flame = [SKEmitterNode emitterNodeWithParticleFileNamed:@"flame"];
@@ -49,7 +55,6 @@ static const CGFloat SnowInitialBirthRate = 20;
 
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         self.physicsWorld.contactDelegate = self;
-
     }
     return self;
 }
