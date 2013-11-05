@@ -9,8 +9,12 @@
 #import <SpriteKit/SpriteKit.h>
 #import "CollisionHandling.h"
 
+
 @interface FloorSegment : SKSpriteNode<CollisionHandling>
 
 + (instancetype)floorSegmentWithRect:(CGRect)rect;
+
+@property (nonatomic) FloorSegment *next;
+@property (nonatomic) FloorSegment *previous;
 
 @end

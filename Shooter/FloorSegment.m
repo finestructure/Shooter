@@ -27,16 +27,25 @@
 
 - (void)collideWith:(SKPhysicsBody *)body
 {
-    NSLog(@"floor segment");
     if ([body.node isKindOfClass:[Snowflake class]]) {
         Snowflake *flake = (Snowflake *)body.node;
         [flake hasLanded];
 
-        CGFloat growBy = flake.size.height/5;
-        NSTimeInterval duration = 0.5;
-        SKAction *move = [SKAction moveByX:0 y:growBy duration:duration];
-        [self runAction:move];
+        CGFloat growth = flake.size.height/20;
+        [self growBy:growth];
+        [self.previous growBy:growth/2];
+        [self.previous.previous growBy:growth/3];
+        [self.next growBy:growth/2];
+        [self.next.next growBy:growth/3];
     }
+}
+
+
+- (void)growBy:(CGFloat)groth
+{
+    NSTimeInterval duration = 0.1;
+    SKAction *move = [SKAction moveByX:0 y:groth duration:duration];
+    [self runAction:move];
 }
 
 

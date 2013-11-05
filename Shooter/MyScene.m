@@ -41,13 +41,6 @@ static const CGFloat SnowInitialBirthRate = 20;
             [self addChild:_flame];
         }
 
-        { // snowflakes
-            for (int i = 0; i < 5; ++i) {
-                Snowflake *n = [SnowMachine createSnowFlakeInFrame:self.frame];
-                [self addChild:n];
-            }
-        }
-
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         self.physicsWorld.contactDelegate = self;
     }
@@ -78,7 +71,8 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    for (int i = 0; i < 100; ++i) {
+    NSUInteger count = 10;
+    for (int i = 0; i < count; ++i) {
         SKNode *n = [SnowMachine createSnowFlakeInFrame:self.frame];
         [self addChild:n];
     }

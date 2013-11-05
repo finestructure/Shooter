@@ -10,9 +10,11 @@
 
 #import "FloorSegment.h"
 
+const NSUInteger NumberOfSegments = 32;
+
 
 @implementation Floor {
-    SKNode *_segment;
+    NSMutableArray *_segments;
 }
 
 
@@ -29,9 +31,23 @@
         // Because we will grow the segments we create them much higher than necessary and push them
         // beyond the bottom edge. That way we don't have to resize them and avoid flickering at the bottom.
         CGFloat negativeOffset = scene.size.height;
-        _segment = [FloorSegment floorSegmentWithRect:CGRectMake(0, -negativeOffset,
-                                                                 scene.size.width, height + negativeOffset)];
-        [scene addChild:_segment];
+
+        NSAssert((NSUInteger)scene.size.width % NumberOfSegments == 0,
+                 @"Width must be divisible by number of segments");
+        CGFloat segmentWidth = scene.size.width / NumberOfSegments;
+
+        _segments = [NSMutableArray arrayWithCapacity:NumberOfSegments];
+        for (int i = 0; i < NumberOfSegments; ++i) {
+            CGFloat x = i * segmentWidth;
+            CGFloat y = -negativeOffset;
+            CGRect rect = CGRectMake(x, y,
+                                     segmentWidth, height + negativeOffset);
+            FloorSegment *s = [FloorSegment floorSegmentWithRect:rect];
+            s.previous = [_segments lastObject];
+            s.previous.next = s;
+            [_segments addObject:s];
+            [scene addChild:s];
+        }
     }
     return self;
 }
