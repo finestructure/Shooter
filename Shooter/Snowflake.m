@@ -27,6 +27,9 @@
 {
     NSLog(@"snowflake hit: %@", body);
     [self removeAllActions];
+    SKAction *fade = [SKAction fadeAlphaTo:0 duration:2];
+    SKAction *remove = [SKAction removeFromParent];
+    [self runAction:[SKAction sequence:@[fade, remove]]];
 }
 
 @end
