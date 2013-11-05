@@ -18,7 +18,7 @@
 {
     Snowflake *node = [Snowflake spriteNodeWithImageNamed:@"spark.png"];
     node.size = CGSizeMake(node.size.width*scale, node.size.height*scale);
-    node.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:node.size.width/2];
+    node.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:node.size.width/2*0.3];
     node.physicsBody.categoryBitMask = SnowCategory;
     node.physicsBody.collisionBitMask = FloorCategory;
     node.physicsBody.contactTestBitMask = FlameCategory | FloorCategory;
@@ -30,7 +30,7 @@
 {
     [self removeAllActions];
     self.physicsBody = nil;
-    SKAction *fade = [SKAction fadeOutWithDuration:1];
+    SKAction *fade = [SKAction fadeOutWithDuration:4];
     SKAction *remove = [SKAction removeFromParent];
     [self runAction:[SKAction sequence:@[fade, remove]]];
 }
