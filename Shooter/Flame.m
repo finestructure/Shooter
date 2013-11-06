@@ -8,7 +8,11 @@
 
 #import "Flame.h"
 
+#import "Collider.h"
+#import "Constants.h"
+#import "FloorSegment.h"
 #import "SKEmitterNode+Util.h"
+#import "Snowflake.h"
 
 
 @implementation Flame
@@ -18,12 +22,22 @@
 {
     Flame *flame = [Flame emitterNodeWithParticleFileNamed:@"flame"];
     flame.position = position;
+    flame.name = @"Flame";
+    
+    flame.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(32*2, 120*2)];
+    flame.physicsBody.dynamic = NO;
+    flame.physicsBody.categoryBitMask = FlameCategory;
+
     return flame;
 }
 
 
 - (void)collideWith:(SKPhysicsBody *)body
 {
+    NSLog(@"flame hit: %@", [body class]);
+    if ([body.node isKindOfClass:[Snowflake class]]) {
+        [Collider collideSnowflake:(Snowflake *)body.node withFlame:self];
+    }
 }
 
 

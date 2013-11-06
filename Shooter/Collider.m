@@ -8,11 +8,22 @@
 
 #import "Collider.h"
 
+#import "Flame.h"
 #import "FloorSegment.h"
 #import "Snowflake.h"
 
 
 @implementation Collider
+
+
++ (void)collideSnowflake:(Snowflake *)flake withFlame:(Flame *)flame
+{
+    NSParameterAssert([flake isKindOfClass:[Snowflake class]]);
+    NSParameterAssert([flame isKindOfClass:[Flame class]]);
+ 
+    NSLog(@"implement collision Flame/Snow!");
+}
+
 
 + (void)collideSnowflake:(Snowflake *)flake withFloorSegment:(FloorSegment *)floorSegment
 {
@@ -22,5 +33,6 @@
     [flake hasLanded];
     [floorSegment absorbSnowflake:flake];
 }
+
 
 @end

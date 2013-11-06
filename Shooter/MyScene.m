@@ -55,6 +55,7 @@ static const CGFloat SnowInitialBirthRate = 20;
 {
     SKNode *nodeA = contact.bodyA.node;
     SKNode *nodeB = contact.bodyB.node;
+
     if ([nodeA respondsToSelector:@selector(collideWith:)]) {
         [(id<CollisionHandling>)nodeA collideWith:contact.bodyB];
     } else if ([nodeB respondsToSelector:@selector(collideWith:)]) {

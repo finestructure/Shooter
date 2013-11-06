@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class Flame;
 @class FloorSegment;
 @class Snowflake;
 
 @interface Collider : NSObject
 
++ (void)collideSnowflake:(Snowflake *)flake withFlame:(Flame *)flame;
 + (void)collideSnowflake:(Snowflake *)flake withFloorSegment:(FloorSegment *)floorSegment;
 
 @end

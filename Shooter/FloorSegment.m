@@ -25,6 +25,7 @@ static const CGFloat DampeningFactory = 0.8;
 {
     FloorSegment *segment = [[FloorSegment alloc] init];
     segment.position = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
+    segment.name = @"FloorSegment";
 
     segment.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:rect.size];
     segment.physicsBody.dynamic = NO;

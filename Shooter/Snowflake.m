@@ -10,6 +10,7 @@
 
 #import "Collider.h"
 #import "Constants.h"
+#import "Flame.h"
 #import "FloorSegment.h"
 
 
@@ -19,10 +20,13 @@
 {
     Snowflake *node = [Snowflake spriteNodeWithImageNamed:@"spark.png"];
     node.size = CGSizeMake(node.size.width*scale, node.size.height*scale);
+    node.name = @"Snowflake";
+    
     node.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:node.size.width/2*0.3];
     node.physicsBody.categoryBitMask = SnowCategory;
-    node.physicsBody.collisionBitMask = FloorCategory;
+    node.physicsBody.collisionBitMask = FlameCategory | FloorCategory;
     node.physicsBody.contactTestBitMask = FlameCategory | FloorCategory;
+    
     return node;
 }
 
@@ -39,9 +43,10 @@
 
 - (void)collideWith:(SKPhysicsBody *)body
 {
-    NSLog(@"snowflake hit: %@", body);
     if ([body.node isKindOfClass:[FloorSegment class]]) {
         [Collider collideSnowflake:self withFloorSegment:(FloorSegment *)body.node];
+    } else if ([body.node isKindOfClass:[Flame class]]) {
+        [Collider collideSnowflake:self withFlame:(Flame *)body.node];
     }
 }
 
