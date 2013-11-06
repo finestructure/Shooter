@@ -8,6 +8,7 @@
 
 #import "FloorSegment.h"
 
+#import "Collider.h"
 #import "Constants.h"
 #import "Snowflake.h"
 
@@ -36,22 +37,25 @@ static const CGFloat DampeningFactory = 0.8;
 - (void)collideWith:(SKPhysicsBody *)body
 {
     if ([body.node isKindOfClass:[Snowflake class]]) {
-        Snowflake *flake = (Snowflake *)body.node;
-        [flake hasLanded];
+        [Collider collideSnowflake:(Snowflake *)body.node withFloorSegment:self];
+    }
+}
 
-        CGFloat growth = GrowthBase + flake.size.height * GrowthSizeFraction;
-        [self growBy:growth];
 
-        // spread the growth to adjacent segments to get a smoother distribution
-        FloorSegment *prev = self.previous;
-        FloorSegment *next = self.next;
-        for (int i = 0; i < GrowthSpread; ++i) {
-            growth *= DampeningFactory;
-            [prev growBy:growth];
-            [next growBy:growth];
-            prev = prev.previous;
-            next = next.next;
-        }
+- (void)absorbSnowflake:(Snowflake *)flake
+{
+    CGFloat growth = GrowthBase + flake.size.height * GrowthSizeFraction;
+    [self growBy:growth];
+
+    // spread the growth to adjacent segments to get a smoother distribution
+    FloorSegment *prev = self.previous;
+    FloorSegment *next = self.next;
+    for (int i = 0; i < GrowthSpread; ++i) {
+        growth *= DampeningFactory;
+        [prev growBy:growth];
+        [next growBy:growth];
+        prev = prev.previous;
+        next = next.next;
     }
 }
 

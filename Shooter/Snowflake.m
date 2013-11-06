@@ -8,6 +8,7 @@
 
 #import "Snowflake.h"
 
+#import "Collider.h"
 #import "Constants.h"
 #import "FloorSegment.h"
 
@@ -40,7 +41,7 @@
 {
     NSLog(@"snowflake hit: %@", body);
     if ([body.node isKindOfClass:[FloorSegment class]]) {
-        [(FloorSegment *)body.node collideWith:self.physicsBody];
+        [Collider collideSnowflake:self withFloorSegment:(FloorSegment *)body.node];
     }
 }
 

@@ -10,9 +10,14 @@
 #import "CollisionHandling.h"
 
 
+@class Snowflake;
+
+
 @interface FloorSegment : SKNode<CollisionHandling>
 
 + (instancetype)floorSegmentWithRect:(CGRect)rect;
+
+- (void)absorbSnowflake:(Snowflake *)flake;
 
 @property (nonatomic) FloorSegment *next;
 @property (nonatomic) FloorSegment *previous;

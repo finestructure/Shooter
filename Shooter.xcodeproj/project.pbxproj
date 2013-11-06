@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2674DD37182AAEBA00B78041 /* Flame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2674DD36182AAEBA00B78041 /* Flame.m */; };
 		2674DD38182AAEBA00B78041 /* Flame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2674DD36182AAEBA00B78041 /* Flame.m */; };
+		2674DD3B182ABF8900B78041 /* Collider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2674DD3A182ABF8900B78041 /* Collider.m */; };
+		2674DD3C182ABF8900B78041 /* Collider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2674DD3A182ABF8900B78041 /* Collider.m */; };
 		5A2DEB1818292ADA00B67F95 /* Floor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DEB1718292ADA00B67F95 /* Floor.m */; };
 		5A2DEB1918292ADA00B67F95 /* Floor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DEB1718292ADA00B67F95 /* Floor.m */; };
 		5A2DEB1C18292FCB00B67F95 /* FloorSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DEB1B18292FCB00B67F95 /* FloorSegment.m */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		2674DD35182AAEBA00B78041 /* Flame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flame.h; sourceTree = "<group>"; };
 		2674DD36182AAEBA00B78041 /* Flame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flame.m; sourceTree = "<group>"; };
+		2674DD39182ABF8900B78041 /* Collider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collider.h; sourceTree = "<group>"; };
+		2674DD3A182ABF8900B78041 /* Collider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collider.m; sourceTree = "<group>"; };
 		5A2DEB1618292ADA00B67F95 /* Floor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Floor.h; sourceTree = "<group>"; };
 		5A2DEB1718292ADA00B67F95 /* Floor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Floor.m; sourceTree = "<group>"; };
 		5A2DEB1A18292FCB00B67F95 /* FloorSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorSegment.h; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 				5A2DEB1B18292FCB00B67F95 /* FloorSegment.m */,
 				2674DD35182AAEBA00B78041 /* Flame.h */,
 				2674DD36182AAEBA00B78041 /* Flame.m */,
+				2674DD39182ABF8900B78041 /* Collider.h */,
+				2674DD3A182ABF8900B78041 /* Collider.m */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 				5A3BD5231826648B008357AE /* Rng.m in Sources */,
 				5A3BD4EA182634BE008357AE /* AppDelegate.m in Sources */,
 				5A2DEB1818292ADA00B67F95 /* Floor.m in Sources */,
+				2674DD3B182ABF8900B78041 /* Collider.m in Sources */,
 				5A3BD4E6182634BE008357AE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +368,7 @@
 				5A94A30E1826B5C20035BA0D /* Snowflake.m in Sources */,
 				5A3BD52818266E61008357AE /* RngTests.m in Sources */,
 				5A2DEB1D18292FCB00B67F95 /* FloorSegment.m in Sources */,
+				2674DD3C182ABF8900B78041 /* Collider.m in Sources */,
 				5A3BD52918266E7E008357AE /* Rng.m in Sources */,
 				5A2DEB1918292ADA00B67F95 /* Floor.m in Sources */,
 				2674DD38182AAEBA00B78041 /* Flame.m in Sources */,
