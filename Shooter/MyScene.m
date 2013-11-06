@@ -10,6 +10,7 @@
 
 #import "CollisionHandling.h"
 #import "Constants.h"
+#import "Flame.h"
 #import "Floor.h"
 #import "SKEmitterNode+Util.h"
 #import "Snowflake.h"
@@ -36,8 +37,7 @@ static const CGFloat SnowInitialBirthRate = 20;
         }
 
         { // flame
-            _flame = [SKEmitterNode emitterNodeWithParticleFileNamed:@"flame"];
-            _flame.position = CGPointMake(CGRectGetMidX(self.frame), FlameYOffset);
+            _flame = [Flame flameAtPosition:CGPointMake(CGRectGetMidX(self.frame), FlameYOffset)];
             [self addChild:_flame];
         }
 
