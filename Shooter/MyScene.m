@@ -61,7 +61,7 @@ static const CGFloat SnowInitialBirthRate = 20;
         [(id<CollisionHandling>)nodeB collideWith:contact.bodyA];
     } else {
         // we just handle bodyA - if bodyB is not supported it will be dealt with in collideWith:
-        NSAssert(NO, @"body does not support collisions: %@", contact.bodyA);
+//        NSAssert(NO, @"body does not support collisions: %@", contact.bodyA);
     }
 }
 
