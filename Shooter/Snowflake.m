@@ -12,6 +12,7 @@
 #import "Constants.h"
 #import "Flame.h"
 #import "FloorSegment.h"
+#import "SKEmitterNode+Util.h"
 
 
 @implementation Snowflake
@@ -38,6 +39,25 @@
     SKAction *fade = [SKAction fadeOutWithDuration:12];
     SKAction *remove = [SKAction removeFromParent];
     [self runAction:[SKAction sequence:@[fade, remove]]];
+}
+
+
+- (void)evaporate
+{
+    [self removeAllActions];
+
+    SKEmitterNode *steam = [SKEmitterNode emitterNodeWithParticleFileNamed:@"steam"];
+
+    SKAction *remove = [SKAction removeFromParent];
+
+    SKAction *puff = [SKAction runBlock:^{
+        steam.position = self.position;
+        [self.scene addChild:steam];
+        SKAction *wait = [SKAction waitForDuration:1];
+        [steam runAction:[SKAction sequence:@[wait, remove]]];
+    }];
+
+    [self runAction:[SKAction sequence:@[puff, remove]]];
 }
 
 

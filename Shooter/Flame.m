@@ -27,7 +27,7 @@
     flame.position = position;
     flame.name = @"Flame";
     
-    flame.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(32*2, 120*2)];
+    flame.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(24, 110)];
     flame.physicsBody.dynamic = NO;
     flame.physicsBody.categoryBitMask = FlameCategory;
 
@@ -37,7 +37,6 @@
 
 - (void)collideWith:(SKPhysicsBody *)body
 {
-    NSLog(@"flame hit: %@", [body class]);
     if ([body.node isKindOfClass:[Snowflake class]]) {
         [Collider collideSnowflake:(Snowflake *)body.node withFlame:self];
     }

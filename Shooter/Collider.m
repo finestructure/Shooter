@@ -21,7 +21,7 @@
     NSParameterAssert([flake isKindOfClass:[Snowflake class]]);
     NSParameterAssert([flame isKindOfClass:[Flame class]]);
  
-    NSLog(@"implement collision Flame/Snow!");
+    [flake evaporate];
 }
 
 
