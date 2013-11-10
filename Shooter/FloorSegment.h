@@ -21,5 +21,6 @@
 
 @property (nonatomic) FloorSegment *next;
 @property (nonatomic) FloorSegment *previous;
+@property (nonatomic, readonly) CGFloat visibleHeight;
 
 @end

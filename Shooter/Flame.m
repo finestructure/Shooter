@@ -43,4 +43,11 @@
 }
 
 
+- (CGFloat)bottomEdgeY
+{
+    // the emitter sits above the base, this is just a number that works well as the "touch point" for the snow
+    return self.frame.origin.y + 40;
+}
+
+
 @end

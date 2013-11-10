@@ -48,4 +48,14 @@ const NSUInteger NumberOfSegments = 32;
 }
 
 
+- (CGFloat)maxHeight
+{
+    CGFloat max = 0;
+    for (FloorSegment *seg in _segments) {
+        max = seg.visibleHeight > max ? seg.visibleHeight : max;
+    }
+    return max;
+}
+
+
 @end

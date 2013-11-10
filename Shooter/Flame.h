@@ -14,4 +14,6 @@
 
 + (instancetype)flameAtPosition:(CGPoint)position;
 
+@property (nonatomic, readonly) CGFloat bottomEdgeY;
+
 @end

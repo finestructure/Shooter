@@ -14,4 +14,6 @@
 
 + (instancetype)floorAtHeight:(CGFloat)height inScene:(SKScene *)scene;
 
+- (CGFloat)maxHeight;
+
 @end

@@ -21,6 +21,7 @@ static const CGFloat DampeningFactory = 0.8;
 
 @implementation FloorSegment
 
+
 + (instancetype)floorSegmentWithRect:(CGRect)rect
 {
     FloorSegment *segment = [[FloorSegment alloc] init];
@@ -68,6 +69,14 @@ static const CGFloat DampeningFactory = 0.8;
         SKAction *move = [SKAction moveByX:0 y:growth duration:duration];
         [self runAction:move];
     }
+}
+
+
+- (CGFloat)visibleHeight
+{
+    // This is a bit of a hack - we use the fact that the position is half of the height, because
+    // that's how the segment is set up above. (We don't have access to the actual height.)
+    return self.position.y * 2;
 }
 
 

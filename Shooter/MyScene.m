@@ -24,7 +24,7 @@ static const CGFloat SnowInitialBirthRate = 20;
 @implementation MyScene {
     BOOL _started;
     Floor *_floor;
-    SKNode *_flame;
+    Flame *_flame;
     SKLabelNode *_intro;
     SKLabelNode *_time;
 }
@@ -69,6 +69,19 @@ static const CGFloat SnowInitialBirthRate = 20;
         self.physicsWorld.contactDelegate = self;
     }
     return self;
+}
+
+
+- (BOOL)isGameOver
+{
+//    NSLog(@"floor: 0.%f", _floor.maxHeight);
+    return _floor.maxHeight >= _flame.bottomEdgeY;
+}
+
+
+- (void)endGame
+{
+    NSLog(@"GAME OVER!");
 }
 
 
@@ -136,6 +149,9 @@ static const CGFloat SnowInitialBirthRate = 20;
             startTime = currentTime;
         });
         _time.text = [NSString stringWithFormat:@"%.1f", currentTime - startTime];
+        if ([self isGameOver]) {
+            [self endGame];
+        }
     }
 }
 
