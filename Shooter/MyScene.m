@@ -24,6 +24,7 @@ static const CGFloat SnowInitialBirthRate = 20;
 @implementation MyScene {
     Floor *_floor;
     SKNode *_flame;
+    SKLabelNode *_intro;
 }
 
 
@@ -31,6 +32,15 @@ static const CGFloat SnowInitialBirthRate = 20;
 {
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+
+        { // description
+            _intro = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+            _intro.text = @"Touch to start";
+            _intro.fontSize = 24;
+            _intro.position = CGPointMake(CGRectGetMidX(self.frame),
+                                           self.frame.size.height - 100);
+            [self addChild:_intro];
+        }
 
         { // floor
             _floor = [Floor floorAtHeight:50 inScene:self];
@@ -60,9 +70,6 @@ static const CGFloat SnowInitialBirthRate = 20;
         [(id<CollisionHandling>)nodeA collideWith:contact.bodyB];
     } else if ([nodeB respondsToSelector:@selector(collideWith:)]) {
         [(id<CollisionHandling>)nodeB collideWith:contact.bodyA];
-    } else {
-        // we just handle bodyA - if bodyB is not supported it will be dealt with in collideWith:
-//        NSAssert(NO, @"body does not support collisions: %@", contact.bodyA);
     }
 }
 
@@ -75,6 +82,14 @@ static const CGFloat SnowInitialBirthRate = 20;
     static BOOL firstTouch = YES;
 
     if (firstTouch) {
+        { // fade out intro
+            SKAction *fall = [SKAction moveByX:0 y:-self.frame.size.height duration:2];
+            SKAction *fade = [SKAction fadeOutWithDuration:1.5];
+            SKAction *remove = [SKAction removeFromParent];
+            SKAction *fadeAndRemove = [SKAction sequence:@[fade, remove]];
+            SKAction *group = [SKAction group:@[fall, fadeAndRemove]];
+            [_intro runAction:group];
+        }
         [SnowMachine startInScene:self];
         firstTouch = NO;
     } else {
