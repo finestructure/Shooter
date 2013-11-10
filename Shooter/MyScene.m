@@ -22,9 +22,11 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 
 @implementation MyScene {
+    BOOL _started;
     Floor *_floor;
     SKNode *_flame;
     SKLabelNode *_intro;
+    SKLabelNode *_time;
 }
 
 
@@ -33,6 +35,8 @@ static const CGFloat SnowInitialBirthRate = 20;
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
 
+        _started = NO;
+
         { // description
             _intro = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
             _intro.text = @"Touch to start";
@@ -40,6 +44,16 @@ static const CGFloat SnowInitialBirthRate = 20;
             _intro.position = CGPointMake(CGRectGetMidX(self.frame),
                                            self.frame.size.height - 100);
             [self addChild:_intro];
+        }
+
+        { // time
+            _time = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+            _time.text = @"";
+            _time.fontSize = 16;
+            _time.position = CGPointMake(20, self.frame.size.height - 40);
+            _time.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+            _time.alpha = 0;
+            [self addChild:_time];
         }
 
         { // floor
@@ -79,9 +93,7 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    static BOOL firstTouch = YES;
-
-    if (firstTouch) {
+    if (! _started) {
         { // fade out intro
             SKAction *fall = [SKAction moveByX:0 y:-self.frame.size.height duration:2];
             SKAction *fade = [SKAction fadeOutWithDuration:1.5];
@@ -90,8 +102,12 @@ static const CGFloat SnowInitialBirthRate = 20;
             SKAction *group = [SKAction group:@[fall, fadeAndRemove]];
             [_intro runAction:group];
         }
+        { // fade in time
+            SKAction *fade = [SKAction fadeInWithDuration:1.5];
+            [_time runAction:fade];
+        }
         [SnowMachine startInScene:self];
-        firstTouch = NO;
+        _started = YES;
     } else {
         NSUInteger count = 10;
         for (int i = 0; i < count; ++i) {
@@ -113,11 +129,14 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 
 -(void)update:(CFTimeInterval)currentTime {
-    static CFTimeInterval startTime;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        startTime = currentTime;
-    });
+    if (_started) {
+        static CFTimeInterval startTime;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            startTime = currentTime;
+        });
+        _time.text = [NSString stringWithFormat:@"%.1f", currentTime - startTime];
+    }
 }
 
 
