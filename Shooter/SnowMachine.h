@@ -15,6 +15,7 @@
 @interface SnowMachine : NSObject
 
 + (void)startInScene:(SKScene *)scene;
++ (void)stop;
 
 + (Snowflake *)createSnowFlakeInScene:(SKScene *)scene;
 

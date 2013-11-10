@@ -22,7 +22,7 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 
 @implementation MyScene {
-    BOOL _started;
+    BOOL _gameIsRunning;
     Floor *_floor;
     Flame *_flame;
     SKLabelNode *_intro;
@@ -35,7 +35,7 @@ static const CGFloat SnowInitialBirthRate = 20;
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
 
-        _started = NO;
+        _gameIsRunning = NO;
 
         { // description
             _intro = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
@@ -81,7 +81,27 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 - (void)endGame
 {
+    _gameIsRunning = NO;
     NSLog(@"GAME OVER!");
+    [SnowMachine stop];
+    { // present game over label
+        SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        label.text = @"GAME OVER!";
+        label.fontColor = [SKColor orangeColor];
+        label.fontSize = 30;
+        label.position = CGPointMake(CGRectGetMidX(self.frame),
+                                     CGRectGetMidY(self.frame));
+        [label setScale:0];
+        SKAction *grow = [SKAction sequence:@[
+                                              [SKAction scaleTo:1.4 duration:0.3],
+                                              [SKAction scaleTo:0.8 duration:0.1],
+                                              [SKAction scaleTo:1.2 duration:0.1],
+                                              [SKAction scaleTo:0.9 duration:0.1],
+                                              [SKAction scaleTo:1.0 duration:0.1],
+                                              ]];
+        [label runAction:grow];
+        [self addChild:label];
+    }
 }
 
 
@@ -106,7 +126,7 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (! _started) {
+    if (! _gameIsRunning) {
         { // fade out intro
             SKAction *fall = [SKAction moveByX:0 y:-self.frame.size.height duration:2];
             SKAction *fade = [SKAction fadeOutWithDuration:1.5];
@@ -120,7 +140,7 @@ static const CGFloat SnowInitialBirthRate = 20;
             [_time runAction:fade];
         }
         [SnowMachine startInScene:self];
-        _started = YES;
+        _gameIsRunning = YES;
     } else {
         NSUInteger count = 10;
         for (int i = 0; i < count; ++i) {
@@ -142,7 +162,7 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 
 -(void)update:(CFTimeInterval)currentTime {
-    if (_started) {
+    if (_gameIsRunning) {
         static CFTimeInterval startTime;
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
