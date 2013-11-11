@@ -65,6 +65,10 @@ static const CGFloat SnowInitialBirthRate = 20;
             [self addChild:_flame];
         }
 
+        { // play no_sound to init audio system
+            [self runAction:[SKAction playSoundFileNamed:@"no_sound.m4a" waitForCompletion:NO]];
+        }
+
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         self.physicsWorld.contactDelegate = self;
     }
@@ -101,6 +105,8 @@ static const CGFloat SnowInitialBirthRate = 20;
                                               ]];
         [label runAction:grow];
         [self addChild:label];
+
+        [self runAction:[SKAction playSoundFileNamed:@"game_over.m4a" waitForCompletion:NO]];
     }
 }
 
@@ -129,7 +135,7 @@ static const CGFloat SnowInitialBirthRate = 20;
     if (! _gameIsRunning) {
         { // fade out intro
             SKAction *fall = [SKAction moveByX:0 y:-self.frame.size.height duration:2];
-            SKAction *fade = [SKAction fadeOutWithDuration:1.5];
+            SKAction *fade = [SKAction fadeOutWithDuration:1];
             SKAction *remove = [SKAction removeFromParent];
             SKAction *fadeAndRemove = [SKAction sequence:@[fade, remove]];
             SKAction *group = [SKAction group:@[fall, fadeAndRemove]];

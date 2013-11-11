@@ -42,6 +42,8 @@
 		5A94A30918267E2F0035BA0D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30718267E2F0035BA0D /* Constants.m */; };
 		5A94A30D1826B5C20035BA0D /* Snowflake.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30C1826B5C20035BA0D /* Snowflake.m */; };
 		5A94A30E1826B5C20035BA0D /* Snowflake.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30C1826B5C20035BA0D /* Snowflake.m */; };
+		5AB7724118312B7C0099AD99 /* game_over.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7724018312B7C0099AD99 /* game_over.m4a */; };
+		5AB7724318312CF90099AD99 /* no_sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7724218312CF90099AD99 /* no_sound.m4a */; };
 		5AD87734182C43660063A920 /* steam.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5AD87733182C43660063A920 /* steam.sks */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,8 @@
 		5A94A30B1826B5C20035BA0D /* Snowflake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snowflake.h; sourceTree = "<group>"; };
 		5A94A30C1826B5C20035BA0D /* Snowflake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snowflake.m; sourceTree = "<group>"; };
 		5A94A30F1826B8530035BA0D /* CollisionHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionHandling.h; sourceTree = "<group>"; };
+		5AB7724018312B7C0099AD99 /* game_over.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = game_over.m4a; sourceTree = "<group>"; };
+		5AB7724218312CF90099AD99 /* no_sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = no_sound.m4a; sourceTree = "<group>"; };
 		5AD87733182C43660063A920 /* steam.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = steam.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +196,8 @@
 		5A3BD51718263E02008357AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5AB7724218312CF90099AD99 /* no_sound.m4a */,
+				5AB7724018312B7C0099AD99 /* game_over.m4a */,
 				5A3BD4EB182634BE008357AE /* Main.storyboard */,
 				5A3BD4F6182634BE008357AE /* Images.xcassets */,
 				5A3BD51318263938008357AE /* flame.sks */,
@@ -326,10 +332,12 @@
 			files = (
 				5A3BD51518263938008357AE /* flame.sks in Resources */,
 				5A3BD5201826433A008357AE /* snow.sks in Resources */,
+				5AB7724118312B7C0099AD99 /* game_over.m4a in Resources */,
 				5A3BD51618263938008357AE /* spark.png in Resources */,
 				5A3BD4E4182634BE008357AE /* InfoPlist.strings in Resources */,
 				5A3BD4F7182634BE008357AE /* Images.xcassets in Resources */,
 				5A3BD4ED182634BE008357AE /* Main.storyboard in Resources */,
+				5AB7724318312CF90099AD99 /* no_sound.m4a in Resources */,
 				5AD87734182C43660063A920 /* steam.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
