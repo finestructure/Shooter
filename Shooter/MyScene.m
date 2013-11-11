@@ -78,16 +78,24 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 - (BOOL)isGameOver
 {
-//    NSLog(@"floor: 0.%f", _floor.maxHeight);
     return _floor.maxHeight >= _flame.bottomEdgeY;
 }
 
 
-- (void)endGame
+- (void)endGame:(CFTimeInterval)survivalTime
 {
     _gameIsRunning = NO;
     NSLog(@"GAME OVER!");
     [SnowMachine stop];
+
+    SKAction *bubbleUp = [SKAction sequence:@[
+                                          [SKAction scaleTo:1.4 duration:0.3],
+                                          [SKAction scaleTo:0.8 duration:0.1],
+                                          [SKAction scaleTo:1.2 duration:0.1],
+                                          [SKAction scaleTo:0.9 duration:0.1],
+                                          [SKAction scaleTo:1.0 duration:0.1],
+                                          ]];
+
     { // present game over label
         SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         label.text = @"GAME OVER!";
@@ -96,18 +104,30 @@ static const CGFloat SnowInitialBirthRate = 20;
         label.position = CGPointMake(CGRectGetMidX(self.frame),
                                      CGRectGetMidY(self.frame));
         [label setScale:0];
-        SKAction *grow = [SKAction sequence:@[
-                                              [SKAction scaleTo:1.4 duration:0.3],
-                                              [SKAction scaleTo:0.8 duration:0.1],
-                                              [SKAction scaleTo:1.2 duration:0.1],
-                                              [SKAction scaleTo:0.9 duration:0.1],
-                                              [SKAction scaleTo:1.0 duration:0.1],
-                                              ]];
-        [label runAction:grow];
+        [label runAction:bubbleUp];
         [self addChild:label];
-
-        [self runAction:[SKAction playSoundFileNamed:@"game_over.m4a" waitForCompletion:NO]];
     }
+    { // score label
+        SKLabelNode *score1 = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        score1.fontSize = 18;
+        SKLabelNode *score2 = [score1 copy];
+        score1.text = @"You survived for";
+        score2.text = [NSString stringWithFormat:@"%.1f seconds!", survivalTime];
+        score1.position = CGPointMake(CGRectGetMidX(self.frame),
+                                      CGRectGetMidY(self.frame) - 40);
+        score2.position = CGPointMake(CGRectGetMidX(self.frame),
+                                      CGRectGetMidY(self.frame) - 70);
+        [score1 setScale:0];
+        [score2 setScale:0];
+
+        [score1 runAction:[SKAction sequence:@[[SKAction waitForDuration:1], bubbleUp]]];
+        [score2 runAction:[SKAction sequence:@[[SKAction waitForDuration:2], bubbleUp]]];
+
+        [self addChild:score1];
+        [self addChild:score2];
+    }
+    [_time runAction:[SKAction fadeOutWithDuration:0.5]];
+    [self runAction:[SKAction playSoundFileNamed:@"game_over.m4a" waitForCompletion:NO]];
 }
 
 
@@ -174,9 +194,10 @@ static const CGFloat SnowInitialBirthRate = 20;
         dispatch_once(&onceToken, ^{
             startTime = currentTime;
         });
-        _time.text = [NSString stringWithFormat:@"%.1f", currentTime - startTime];
+        CFTimeInterval survivalTime = currentTime - startTime;
+        _time.text = [NSString stringWithFormat:@"%.1f", survivalTime];
         if ([self isGameOver]) {
-            [self endGame];
+            [self endGame:survivalTime];
         }
     }
 }
