@@ -50,6 +50,7 @@ static const CGFloat SnowInitialBirthRate = 20;
             _time = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
             _time.text = @"";
             _time.fontSize = 16;
+            _time.fontColor = [SKColor orangeColor];
             _time.position = CGPointMake(20, self.frame.size.height - 40);
             _time.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
             _time.alpha = 0;
@@ -152,7 +153,7 @@ static const CGFloat SnowInitialBirthRate = 20;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (! _gameIsRunning) {
+    if (! _gameIsRunning && ! [self isGameOver]) {
         { // fade out intro
             SKAction *fall = [SKAction moveByX:0 y:-self.frame.size.height duration:2];
             SKAction *fade = [SKAction fadeOutWithDuration:1];
@@ -167,12 +168,6 @@ static const CGFloat SnowInitialBirthRate = 20;
         }
         [SnowMachine startInScene:self];
         _gameIsRunning = YES;
-    } else {
-        NSUInteger count = 10;
-        for (int i = 0; i < count; ++i) {
-            SKNode *n = [SnowMachine createSnowFlakeInScene:self];
-            [self addChild:n];
-        }
     }
 }
 
