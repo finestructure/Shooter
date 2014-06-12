@@ -8,6 +8,7 @@
 
 #import "FloorSegment.h"
 
+#import "Collider.h"
 #import "Constants.h"
 #import "Snowflake.h"
 
@@ -20,10 +21,12 @@ static const CGFloat DampeningFactory = 0.8;
 
 @implementation FloorSegment
 
+
 + (instancetype)floorSegmentWithRect:(CGRect)rect
 {
     FloorSegment *segment = [[FloorSegment alloc] init];
     segment.position = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
+    segment.name = @"FloorSegment";
 
     segment.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:rect.size];
     segment.physicsBody.dynamic = NO;
@@ -36,22 +39,25 @@ static const CGFloat DampeningFactory = 0.8;
 - (void)collideWith:(SKPhysicsBody *)body
 {
     if ([body.node isKindOfClass:[Snowflake class]]) {
-        Snowflake *flake = (Snowflake *)body.node;
-        [flake hasLanded];
+        [Collider collideSnowflake:(Snowflake *)body.node withFloorSegment:self];
+    }
+}
 
-        CGFloat growth = GrowthBase + flake.size.height * GrowthSizeFraction;
-        [self growBy:growth];
 
-        // spread the growth to adjacent segments to get a smoother distribution
-        FloorSegment *prev = self.previous;
-        FloorSegment *next = self.next;
-        for (int i = 0; i < GrowthSpread; ++i) {
-            growth *= DampeningFactory;
-            [prev growBy:growth];
-            [next growBy:growth];
-            prev = prev.previous;
-            next = next.next;
-        }
+- (void)absorbSnowflake:(Snowflake *)flake
+{
+    CGFloat growth = GrowthBase + flake.size.height * GrowthSizeFraction;
+    [self growBy:growth];
+
+    // spread the growth to adjacent segments to get a smoother distribution
+    FloorSegment *prev = self.previous;
+    FloorSegment *next = self.next;
+    for (int i = 0; i < GrowthSpread; ++i) {
+        growth *= DampeningFactory;
+        [prev growBy:growth];
+        [next growBy:growth];
+        prev = prev.previous;
+        next = next.next;
     }
 }
 
@@ -63,6 +69,14 @@ static const CGFloat DampeningFactory = 0.8;
         SKAction *move = [SKAction moveByX:0 y:growth duration:duration];
         [self runAction:move];
     }
+}
+
+
+- (CGFloat)visibleHeight
+{
+    // This is a bit of a hack - we use the fact that the position is half of the height, because
+    // that's how the segment is set up above. (We don't have access to the actual height.)
+    return self.position.y * 2;
 }
 
 

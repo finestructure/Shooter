@@ -14,5 +14,6 @@
 + (instancetype)snowflakeWithScale:(CGFloat)scale;
 
 - (void)hasLanded;
+- (void)evaporate;
 
 @end

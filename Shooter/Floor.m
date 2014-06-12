@@ -28,10 +28,6 @@ const NSUInteger NumberOfSegments = 32;
 {
     self = [super init];
     if (self) {
-        // Because we will grow the segments we create them much higher than necessary and push them
-        // beyond the bottom edge. That way we don't have to resize them and avoid flickering at the bottom.
-        CGFloat negativeOffset = scene.size.height;
-
         NSAssert((NSUInteger)scene.size.width % NumberOfSegments == 0,
                  @"Width must be divisible by number of segments");
         CGFloat segmentWidth = scene.size.width / NumberOfSegments;
@@ -39,9 +35,8 @@ const NSUInteger NumberOfSegments = 32;
         _segments = [NSMutableArray arrayWithCapacity:NumberOfSegments];
         for (int i = 0; i < NumberOfSegments; ++i) {
             CGFloat x = i * segmentWidth;
-            CGFloat y = -negativeOffset;
-            CGRect rect = CGRectMake(x, y,
-                                     segmentWidth, height + negativeOffset);
+            CGFloat y = 0;
+            CGRect rect = CGRectMake(x, y, segmentWidth, height);
             FloorSegment *s = [FloorSegment floorSegmentWithRect:rect];
             s.previous = [_segments lastObject];
             s.previous.next = s;
@@ -50,6 +45,16 @@ const NSUInteger NumberOfSegments = 32;
         }
     }
     return self;
+}
+
+
+- (CGFloat)maxHeight
+{
+    CGFloat max = 0;
+    for (FloorSegment *seg in _segments) {
+        max = seg.visibleHeight > max ? seg.visibleHeight : max;
+    }
+    return max;
 }
 
 

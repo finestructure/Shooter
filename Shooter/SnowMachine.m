@@ -49,9 +49,22 @@ static const NSUInteger ChildCountThrottleLimit = 500;
 }
 
 
++ (void)stop
+{
+    [[self sharedInstance] stop];
+}
+
+
 - (void)start
 {
     _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(snow) userInfo:nil repeats:YES];
+}
+
+
+- (void)stop
+{
+    [_timer invalidate];
+    _timer = nil;
 }
 
 
