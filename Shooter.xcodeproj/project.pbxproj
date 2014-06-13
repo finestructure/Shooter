@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		265451CD194A008E00D3B25A /* Rng.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD5221826648B008357AE /* Rng.m */; };
 		265451D4194A047300D3B25A /* RngTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265451D3194A047300D3B25A /* RngTests.swift */; };
+		265451D7194B010C00D3B25A /* Rng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265451D6194B010C00D3B25A /* Rng.swift */; };
+		265451D8194B010C00D3B25A /* Rng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265451D6194B010C00D3B25A /* Rng.swift */; };
 		2674DD37182AAEBA00B78041 /* Flame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2674DD36182AAEBA00B78041 /* Flame.m */; };
 		2674DD3B182ABF8900B78041 /* Collider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2674DD3A182ABF8900B78041 /* Collider.m */; };
 		5A2DEB1818292ADA00B67F95 /* Floor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DEB1718292ADA00B67F95 /* Floor.m */; };
@@ -28,7 +29,6 @@
 		5A3BD51618263938008357AE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51418263938008357AE /* spark.png */; };
 		5A3BD51C182640A4008357AE /* SKEmitterNode+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD51B182640A4008357AE /* SKEmitterNode+Util.m */; };
 		5A3BD5201826433A008357AE /* snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51F1826433A008357AE /* snow.sks */; };
-		5A3BD5231826648B008357AE /* Rng.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD5221826648B008357AE /* Rng.m */; };
 		5A3BD526182668B1008357AE /* SnowMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD525182668B1008357AE /* SnowMachine.m */; };
 		5A94A30818267E2F0035BA0D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30718267E2F0035BA0D /* Constants.m */; };
 		5A94A30D1826B5C20035BA0D /* Snowflake.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30C1826B5C20035BA0D /* Snowflake.m */; };
@@ -50,6 +50,8 @@
 /* Begin PBXFileReference section */
 		265451D2194A047200D3B25A /* ShooterTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShooterTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		265451D3194A047300D3B25A /* RngTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RngTests.swift; sourceTree = "<group>"; };
+		265451D5194B010B00D3B25A /* Shooter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shooter-Bridging-Header.h"; sourceTree = "<group>"; };
+		265451D6194B010C00D3B25A /* Rng.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rng.swift; sourceTree = "<group>"; };
 		265E844D1949FE5C00D2587F /* ShooterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShooterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		265E84501949FE5C00D2587F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2674DD35182AAEBA00B78041 /* Flame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flame.h; sourceTree = "<group>"; };
@@ -83,8 +85,6 @@
 		5A3BD51A182640A4008357AE /* SKEmitterNode+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKEmitterNode+Util.h"; sourceTree = "<group>"; };
 		5A3BD51B182640A4008357AE /* SKEmitterNode+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKEmitterNode+Util.m"; sourceTree = "<group>"; };
 		5A3BD51F1826433A008357AE /* snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snow.sks; sourceTree = "<group>"; };
-		5A3BD5211826648B008357AE /* Rng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rng.h; sourceTree = "<group>"; };
-		5A3BD5221826648B008357AE /* Rng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rng.m; sourceTree = "<group>"; };
 		5A3BD524182668B1008357AE /* SnowMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowMachine.h; sourceTree = "<group>"; };
 		5A3BD525182668B1008357AE /* SnowMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowMachine.m; sourceTree = "<group>"; };
 		5A94A30618267E2F0035BA0D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -228,8 +228,8 @@
 			children = (
 				5A3BD51A182640A4008357AE /* SKEmitterNode+Util.h */,
 				5A3BD51B182640A4008357AE /* SKEmitterNode+Util.m */,
-				5A3BD5211826648B008357AE /* Rng.h */,
-				5A3BD5221826648B008357AE /* Rng.m */,
+				265451D6194B010C00D3B25A /* Rng.swift */,
+				265451D5194B010B00D3B25A /* Shooter-Bridging-Header.h */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265451CD194A008E00D3B25A /* Rng.m in Sources */,
+				265451D8194B010C00D3B25A /* Rng.swift in Sources */,
 				265451D4194A047300D3B25A /* RngTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,10 +369,10 @@
 				5A94A30D1826B5C20035BA0D /* Snowflake.m in Sources */,
 				2674DD37182AAEBA00B78041 /* Flame.m in Sources */,
 				5A2DEB1C18292FCB00B67F95 /* FloorSegment.m in Sources */,
+				265451D7194B010C00D3B25A /* Rng.swift in Sources */,
 				5A3BD4F3182634BE008357AE /* MyScene.m in Sources */,
 				5A94A30818267E2F0035BA0D /* Constants.m in Sources */,
 				5A3BD4F0182634BE008357AE /* ViewController.m in Sources */,
-				5A3BD5231826648B008357AE /* Rng.m in Sources */,
 				5A3BD4EA182634BE008357AE /* AppDelegate.m in Sources */,
 				5A2DEB1818292ADA00B67F95 /* Floor.m in Sources */,
 				2674DD3B182ABF8900B78041 /* Collider.m in Sources */,
@@ -536,11 +536,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Shooter/Shooter-Prefix.pch";
 				INFOPLIST_FILE = "Shooter/Shooter-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shooter/Shooter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -550,11 +554,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Shooter/Shooter-Prefix.pch";
 				INFOPLIST_FILE = "Shooter/Shooter-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shooter/Shooter-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

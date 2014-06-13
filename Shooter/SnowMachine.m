@@ -9,8 +9,8 @@
 #import "SnowMachine.h"
 
 #import "Constants.h"
-#import "Rng.h"
 #import "Snowflake.h"
+#import "Shooter-Swift.h"
 
 
 static const CGFloat InitialFlakesPerSecond = 5;
