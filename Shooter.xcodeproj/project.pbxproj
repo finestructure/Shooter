@@ -87,7 +87,6 @@
 		5A3BD5221826648B008357AE /* Rng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rng.m; sourceTree = "<group>"; };
 		5A3BD524182668B1008357AE /* SnowMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowMachine.h; sourceTree = "<group>"; };
 		5A3BD525182668B1008357AE /* SnowMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowMachine.m; sourceTree = "<group>"; };
-		5A3BD52718266E61008357AE /* RngTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RngTests.m; sourceTree = "<group>"; };
 		5A94A30618267E2F0035BA0D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5A94A30718267E2F0035BA0D /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		5A94A30B1826B5C20035BA0D /* Snowflake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snowflake.h; sourceTree = "<group>"; };
@@ -123,7 +122,6 @@
 		265E844E1949FE5C00D2587F /* ShooterTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A3BD52718266E61008357AE /* RngTests.m */,
 				265E844F1949FE5C00D2587F /* Supporting Files */,
 				265451D3194A047300D3B25A /* RngTests.swift */,
 				265451D2194A047200D3B25A /* ShooterTests-Bridging-Header.h */,

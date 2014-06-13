@@ -9,20 +9,13 @@
 import XCTest
 
 let NumberOfIterations = 100000
-let ThreeSigma = 0.03
+let MaxDelta = 0.03
 
 class RngTest: XCTestCase {
-    var avg: Double?
-    var min: Double?
-    var max: Double?
     
-    override func setUp() {
-        avg = nil
-        min = Double(Int.max)
-        max = Double(Int.min)
-    }
-    
-    func computeStats(rng:()->Double) {
+    func computeStats(rng:()->Double) -> (Double, Double, Double) {
+        var min = Double(Int.max)
+        var max = Double(Int.min)
         var sum = 0.0
         for var i = 0; i < NumberOfIterations; ++i {
             var value = rng()
@@ -30,50 +23,51 @@ class RngTest: XCTestCase {
             max = (value > max) ? value : max
             sum += value
         }
-        avg = sum/Double(NumberOfIterations)
+        let avg = sum/Double(NumberOfIterations)
+        return (min, max, avg)
     }
     
     func test_uniform_1() {
-        computeStats {
+        let (min, max, avg) = computeStats {
             Rng.uniform()
         }
-        XCTAssertEqualWithAccuracy(avg!, 0.5, ThreeSigma, "\(avg)")
+        XCTAssertEqualWithAccuracy(avg, 0.5, MaxDelta, "\(avg)")
         XCTAssertTrue(min >= 0, "min was: \(min)")
         XCTAssertTrue(max < 1, "max was: \(max)")
     }
     
     func test_uniform_2() {
-        computeStats {
+        let (min, max, avg) = computeStats {
             Rng.uniform(5)
         }
-        XCTAssertEqualWithAccuracy(avg!, 2.5, ThreeSigma, "\(avg)");
+        XCTAssertEqualWithAccuracy(avg, 2.5, MaxDelta, "\(avg)");
         XCTAssertTrue(min >= 0, "min was: \(min)")
         XCTAssertTrue(max < 5, "max was: \(max)")
     }
     
     func test_uniform_min_max_1() {
-        computeStats {
+        let (min, max, avg) = computeStats {
             Rng.uniformMin(2, max: 6)
         }
-        XCTAssertEqualWithAccuracy(avg!, 4, ThreeSigma, "\(avg)");
+        XCTAssertEqualWithAccuracy(avg, 4, MaxDelta, "\(avg)");
         XCTAssertTrue(min >= 2, "min was: \(min)")
         XCTAssertTrue(max < 6, "max was: \(max)")
     }
     
     func test_uniform_min_max_2() {
-        computeStats {
+        let (min, max, avg) = computeStats {
             Rng.uniformMin(-1, max: 5)
         }
-        XCTAssertEqualWithAccuracy(avg!, 2, ThreeSigma, "\(avg)");
+        XCTAssertEqualWithAccuracy(avg, 2, MaxDelta, "\(avg)");
         XCTAssertTrue(min >= -1, "min was: \(min)")
         XCTAssertTrue(max < 5, "max was: \(max)")
     }
     
     func test_uniform_min_max_3() {
-        computeStats {
+        let (min, max, avg) = computeStats {
             Rng.uniformMin(-3, max: 3)
         }
-        XCTAssertEqualWithAccuracy(avg!, 0, ThreeSigma, "\(avg)");
+        XCTAssertEqualWithAccuracy(avg, 0, MaxDelta, "\(avg)");
         XCTAssertTrue(min >= -3, "min was: \(min)")
         XCTAssertTrue(max < 3, "max was: \(max)")
     }
