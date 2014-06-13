@@ -8,8 +8,9 @@
 
 import UIKit
 
+
 class Rng: NSObject {
-   
+
     class func uniform() -> Double {
         return Double(arc4random()) / Double(UInt32.max);
     }

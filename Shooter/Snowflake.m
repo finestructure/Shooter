@@ -12,7 +12,7 @@
 #import "Constants.h"
 #import "Flame.h"
 #import "FloorSegment.h"
-#import "SKEmitterNode+Util.h"
+#import "Shooter-Swift.h"
 
 
 @implementation Snowflake

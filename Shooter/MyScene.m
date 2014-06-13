@@ -12,7 +12,6 @@
 #import "Constants.h"
 #import "Flame.h"
 #import "Floor.h"
-#import "SKEmitterNode+Util.h"
 #import "Snowflake.h"
 #import "SnowMachine.h"
 

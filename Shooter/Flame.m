@@ -11,8 +11,8 @@
 #import "Collider.h"
 #import "Constants.h"
 #import "FloorSegment.h"
-#import "SKEmitterNode+Util.h"
 #import "Snowflake.h"
+#import "Shooter-Swift.h"
 
 
 @implementation Flame
