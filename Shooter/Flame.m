@@ -9,7 +9,6 @@
 #import "Flame.h"
 
 #import "Collider.h"
-#import "Constants.h"
 #import "FloorSegment.h"
 #import "Snowflake.h"
 #import "Shooter-Swift.h"
@@ -29,7 +28,7 @@
     
     flame.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(24, 110)];
     flame.physicsBody.dynamic = NO;
-    flame.physicsBody.categoryBitMask = FlameCategory;
+    flame.physicsBody.categoryBitMask = [ObjectCategory Flame];
 
     return flame;
 }

@@ -13,6 +13,8 @@
 		265451D8194B010C00D3B25A /* Rng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265451D6194B010C00D3B25A /* Rng.swift */; };
 		2674DD37182AAEBA00B78041 /* Flame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2674DD36182AAEBA00B78041 /* Flame.m */; };
 		2674DD3B182ABF8900B78041 /* Collider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2674DD3A182ABF8900B78041 /* Collider.m */; };
+		26F1B520194F37B50087C7A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1B51F194F37B50087C7A1 /* Constants.swift */; };
+		26F1B521194F37B50087C7A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1B51F194F37B50087C7A1 /* Constants.swift */; };
 		5A2DEB1818292ADA00B67F95 /* Floor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DEB1718292ADA00B67F95 /* Floor.m */; };
 		5A2DEB1C18292FCB00B67F95 /* FloorSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DEB1B18292FCB00B67F95 /* FloorSegment.m */; };
 		5A3BD4D8182634BE008357AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4D7182634BE008357AE /* Foundation.framework */; };
@@ -30,7 +32,6 @@
 		5A3BD51618263938008357AE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51418263938008357AE /* spark.png */; };
 		5A3BD5201826433A008357AE /* snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51F1826433A008357AE /* snow.sks */; };
 		5A3BD526182668B1008357AE /* SnowMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD525182668B1008357AE /* SnowMachine.m */; };
-		5A94A30818267E2F0035BA0D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30718267E2F0035BA0D /* Constants.m */; };
 		5A94A30D1826B5C20035BA0D /* Snowflake.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94A30C1826B5C20035BA0D /* Snowflake.m */; };
 		5AB7724118312B7C0099AD99 /* game_over.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7724018312B7C0099AD99 /* game_over.m4a */; };
 		5AB7724318312CF90099AD99 /* no_sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7724218312CF90099AD99 /* no_sound.m4a */; };
@@ -59,6 +60,7 @@
 		2674DD36182AAEBA00B78041 /* Flame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flame.m; sourceTree = "<group>"; };
 		2674DD39182ABF8900B78041 /* Collider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collider.h; sourceTree = "<group>"; };
 		2674DD3A182ABF8900B78041 /* Collider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collider.m; sourceTree = "<group>"; };
+		26F1B51F194F37B50087C7A1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5A2DEB1618292ADA00B67F95 /* Floor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Floor.h; sourceTree = "<group>"; };
 		5A2DEB1718292ADA00B67F95 /* Floor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Floor.m; sourceTree = "<group>"; };
 		5A2DEB1A18292FCB00B67F95 /* FloorSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorSegment.h; sourceTree = "<group>"; };
@@ -86,8 +88,6 @@
 		5A3BD51F1826433A008357AE /* snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snow.sks; sourceTree = "<group>"; };
 		5A3BD524182668B1008357AE /* SnowMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowMachine.h; sourceTree = "<group>"; };
 		5A3BD525182668B1008357AE /* SnowMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowMachine.m; sourceTree = "<group>"; };
-		5A94A30618267E2F0035BA0D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		5A94A30718267E2F0035BA0D /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		5A94A30B1826B5C20035BA0D /* Snowflake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snowflake.h; sourceTree = "<group>"; };
 		5A94A30C1826B5C20035BA0D /* Snowflake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snowflake.m; sourceTree = "<group>"; };
 		5A94A30F1826B8530035BA0D /* CollisionHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionHandling.h; sourceTree = "<group>"; };
@@ -216,8 +216,7 @@
 				5A3BD4F2182634BE008357AE /* MyScene.m */,
 				5A3BD524182668B1008357AE /* SnowMachine.h */,
 				5A3BD525182668B1008357AE /* SnowMachine.m */,
-				5A94A30618267E2F0035BA0D /* Constants.h */,
-				5A94A30718267E2F0035BA0D /* Constants.m */,
+				26F1B51F194F37B50087C7A1 /* Constants.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -355,6 +354,7 @@
 			files = (
 				265451D8194B010C00D3B25A /* Rng.swift in Sources */,
 				265451D4194A047300D3B25A /* RngTests.swift in Sources */,
+				26F1B521194F37B50087C7A1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,11 +368,11 @@
 				5A2DEB1C18292FCB00B67F95 /* FloorSegment.m in Sources */,
 				265451D7194B010C00D3B25A /* Rng.swift in Sources */,
 				5A3BD4F3182634BE008357AE /* MyScene.m in Sources */,
-				5A94A30818267E2F0035BA0D /* Constants.m in Sources */,
 				5A3BD4F0182634BE008357AE /* ViewController.m in Sources */,
 				5A3BD4EA182634BE008357AE /* AppDelegate.m in Sources */,
 				5A2DEB1818292ADA00B67F95 /* Floor.m in Sources */,
 				2674DD3B182ABF8900B78041 /* Collider.m in Sources */,
+				26F1B520194F37B50087C7A1 /* Constants.swift in Sources */,
 				262401BC194B357000332234 /* SKEmitterNode+Util.swift in Sources */,
 				5A3BD4E6182634BE008357AE /* main.m in Sources */,
 			);

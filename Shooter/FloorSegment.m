@@ -9,8 +9,8 @@
 #import "FloorSegment.h"
 
 #import "Collider.h"
-#import "Constants.h"
 #import "Snowflake.h"
+#import "Shooter-Swift.h"
 
 
 static const CGFloat GrowthBase = 0.5;
@@ -30,7 +30,7 @@ static const CGFloat DampeningFactory = 0.8;
 
     segment.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:rect.size];
     segment.physicsBody.dynamic = NO;
-    segment.physicsBody.categoryBitMask = FloorCategory;
+    segment.physicsBody.categoryBitMask = [ObjectCategory Floor];
 
     return segment;
 }

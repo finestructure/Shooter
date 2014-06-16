@@ -9,7 +9,6 @@
 #import "Snowflake.h"
 
 #import "Collider.h"
-#import "Constants.h"
 #import "Flame.h"
 #import "FloorSegment.h"
 #import "Shooter-Swift.h"
@@ -24,9 +23,9 @@
     node.name = @"Snowflake";
     
     node.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:node.size.width/2*0.3];
-    node.physicsBody.categoryBitMask = SnowCategory;
-    node.physicsBody.collisionBitMask = FlameCategory | FloorCategory;
-    node.physicsBody.contactTestBitMask = FlameCategory | FloorCategory;
+    node.physicsBody.categoryBitMask = [ObjectCategory Snow];
+    node.physicsBody.collisionBitMask = [ObjectCategory Flame] | [ObjectCategory Floor];
+    node.physicsBody.contactTestBitMask = [ObjectCategory Flame] | [ObjectCategory Floor];
     
     return node;
 }

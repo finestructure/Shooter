@@ -9,7 +9,6 @@
 #import "MyScene.h"
 
 #import "CollisionHandling.h"
-#import "Constants.h"
 #import "Flame.h"
 #import "Floor.h"
 #import "Snowflake.h"

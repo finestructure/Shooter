@@ -8,7 +8,6 @@
 
 #import "SnowMachine.h"
 
-#import "Constants.h"
 #import "Snowflake.h"
 #import "Shooter-Swift.h"
 
