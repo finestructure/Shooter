@@ -11,6 +11,7 @@
 		265451D4194A047300D3B25A /* RngTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265451D3194A047300D3B25A /* RngTests.swift */; };
 		265451D7194B010C00D3B25A /* Rng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265451D6194B010C00D3B25A /* Rng.swift */; };
 		265451D8194B010C00D3B25A /* Rng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265451D6194B010C00D3B25A /* Rng.swift */; };
+		26618626194F40C1004D65C9 /* CollisionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26618625194F40C1004D65C9 /* CollisionHandling.swift */; };
 		2674DD37182AAEBA00B78041 /* Flame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2674DD36182AAEBA00B78041 /* Flame.m */; };
 		2674DD3B182ABF8900B78041 /* Collider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2674DD3A182ABF8900B78041 /* Collider.m */; };
 		26F1B520194F37B50087C7A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1B51F194F37B50087C7A1 /* Constants.swift */; };
@@ -56,6 +57,7 @@
 		265451D6194B010C00D3B25A /* Rng.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rng.swift; sourceTree = "<group>"; };
 		265E844D1949FE5C00D2587F /* ShooterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShooterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		265E84501949FE5C00D2587F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26618625194F40C1004D65C9 /* CollisionHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionHandling.swift; sourceTree = "<group>"; };
 		2674DD35182AAEBA00B78041 /* Flame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flame.h; sourceTree = "<group>"; };
 		2674DD36182AAEBA00B78041 /* Flame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flame.m; sourceTree = "<group>"; };
 		2674DD39182ABF8900B78041 /* Collider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collider.h; sourceTree = "<group>"; };
@@ -90,7 +92,6 @@
 		5A3BD525182668B1008357AE /* SnowMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowMachine.m; sourceTree = "<group>"; };
 		5A94A30B1826B5C20035BA0D /* Snowflake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snowflake.h; sourceTree = "<group>"; };
 		5A94A30C1826B5C20035BA0D /* Snowflake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snowflake.m; sourceTree = "<group>"; };
-		5A94A30F1826B8530035BA0D /* CollisionHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionHandling.h; sourceTree = "<group>"; };
 		5AB7724018312B7C0099AD99 /* game_over.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = game_over.m4a; sourceTree = "<group>"; };
 		5AB7724218312CF90099AD99 /* no_sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = no_sound.m4a; sourceTree = "<group>"; };
 		5AD87733182C43660063A920 /* steam.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = steam.sks; sourceTree = "<group>"; };
@@ -234,7 +235,7 @@
 		5A94A30A1826B5980035BA0D /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				5A94A30F1826B8530035BA0D /* CollisionHandling.h */,
+				26618625194F40C1004D65C9 /* CollisionHandling.swift */,
 				5A94A30B1826B5C20035BA0D /* Snowflake.h */,
 				5A94A30C1826B5C20035BA0D /* Snowflake.m */,
 				5A2DEB1618292ADA00B67F95 /* Floor.h */,
@@ -373,6 +374,7 @@
 				5A2DEB1818292ADA00B67F95 /* Floor.m in Sources */,
 				2674DD3B182ABF8900B78041 /* Collider.m in Sources */,
 				26F1B520194F37B50087C7A1 /* Constants.swift in Sources */,
+				26618626194F40C1004D65C9 /* CollisionHandling.swift in Sources */,
 				262401BC194B357000332234 /* SKEmitterNode+Util.swift in Sources */,
 				5A3BD4E6182634BE008357AE /* main.m in Sources */,
 			);

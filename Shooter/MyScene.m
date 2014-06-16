@@ -8,7 +8,7 @@
 
 #import "MyScene.h"
 
-#import "CollisionHandling.h"
+#import "Shooter-Swift.h"
 #import "Flame.h"
 #import "Floor.h"
 #import "Snowflake.h"
