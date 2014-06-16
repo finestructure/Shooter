@@ -16,7 +16,6 @@
 
 
 static const CGFloat FlameYOffset = 100;
-static const CGFloat SnowInitialBirthRate = 20;
 
 
 @implementation MyScene {

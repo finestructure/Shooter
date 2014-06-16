@@ -26,7 +26,7 @@ class Rng: NSObject {
     }
     
     class func uniformRange(range: CGVector) -> Double {
-        return uniformMin(range.dx, max: range.dy)
+        return uniformMin(Double(range.dx), max: Double(range.dy))
     }
 
 }
