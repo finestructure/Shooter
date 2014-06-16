@@ -22,7 +22,7 @@
 {
     // we need to map SKEmitterNode to Flame before unarchiving
     [NSKeyedUnarchiver setClass:self forClassName:@"SKEmitterNode"];
-    Flame *flame = [Flame emitterNodeWithParticleFileNamed:@"flame"];
+    Flame *flame = (Flame *)[Flame emitterNodeWithParticleFileNamed:@"flame"];
 
     flame.position = position;
     flame.name = @"Flame";
