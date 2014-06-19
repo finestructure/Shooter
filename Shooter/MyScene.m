@@ -9,9 +9,6 @@
 #import "MyScene.h"
 
 #import "Shooter-Swift.h"
-#import "Flame.h"
-#import "Floor.h"
-#import "Snowflake.h"
 #import "SnowMachine.h"
 
 
@@ -55,11 +52,11 @@ static const CGFloat FlameYOffset = 100;
         }
 
         { // floor
-            _floor = [Floor floorAtHeight:50 inScene:self];
+            _floor = [[Floor alloc] initWithHeight:50 scene:self];
         }
 
         { // flame
-            _flame = [Flame flameAtPosition:CGPointMake(CGRectGetMidX(self.frame), FlameYOffset)];
+            _flame = [[Flame alloc] initWithPosition:CGPointMake(CGRectGetMidX(self.frame), FlameYOffset)];
             [self addChild:_flame];
         }
 
@@ -137,10 +134,10 @@ static const CGFloat FlameYOffset = 100;
     SKNode *nodeA = contact.bodyA.node;
     SKNode *nodeB = contact.bodyB.node;
 
-    if ([nodeA respondsToSelector:@selector(collideWith:)]) {
-        [(id<CollisionHandling>)nodeA collideWith:contact.bodyB];
-    } else if ([nodeB respondsToSelector:@selector(collideWith:)]) {
-        [(id<CollisionHandling>)nodeB collideWith:contact.bodyA];
+    if ([nodeA respondsToSelector:@selector(collide:)]) {
+        [(id<CollisionHandling>)nodeA collide:contact.bodyB];
+    } else if ([nodeB respondsToSelector:@selector(collide:)]) {
+        [(id<CollisionHandling>)nodeB collide:contact.bodyA];
     }
 }
 

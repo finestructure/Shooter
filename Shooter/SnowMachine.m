@@ -8,7 +8,6 @@
 
 #import "SnowMachine.h"
 
-#import "Snowflake.h"
 #import "Shooter-Swift.h"
 
 
@@ -109,7 +108,7 @@ static const NSUInteger ChildCountThrottleLimit = 500;
     CGFloat x = scene.size.height * tan(angle) + start.x;
     CGPoint end = CGPointMake(x, 0);
 
-    Snowflake *n = [Snowflake snowflakeWithScale:scale];
+    Snowflake *n = [[Snowflake alloc] initWithScale:scale];
     n.position = start;
     SKAction *move = [SKAction moveTo:end duration:time];
     SKAction *remove = [SKAction removeFromParent];

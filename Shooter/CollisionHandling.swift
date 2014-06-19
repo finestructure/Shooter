@@ -9,5 +9,5 @@
 import SpriteKit
 
 @objc protocol CollisionHandling {
-    func collideWith(body: SKPhysicsBody)
+    func collide(body: SKPhysicsBody)
 }
