@@ -13,14 +13,14 @@ import SpriteKit
 let NumberOfSegments = 32
 
 class Floor: NSObject {
-    var segments: FloorSegment[] = []
+    var segments: [FloorSegment] = []
     
     init(height: CGFloat, scene: SKScene) {
         assert(Int(scene.size.width) % NumberOfSegments == 0, "Width must be divisible by number of segments", file: "Floor.swift", line: 0)
         
         let segmentWidth = scene.size.width / CGFloat(NumberOfSegments)
         
-        for i in 0..NumberOfSegments {
+        for i in 0..<NumberOfSegments {
             let x: CGFloat = CGFloat(i) * segmentWidth
             let y: CGFloat = 0
             let rect = CGRect(x: x, y: y, width: segmentWidth, height: height)

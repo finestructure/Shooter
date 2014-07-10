@@ -58,7 +58,7 @@ class FloorSegment: SKNode, CollisionHandling {
         // spread the growth to adjacent segments to get a smoother distribution
         var prev = self.previous;
         var next = self.next;
-        for i in 0..GrowthSpeed {
+        for i in 0..<GrowthSpeed {
             growth = growth * DampeningFactor;
             prev!.growBy(growth)
             next!.growBy(growth)

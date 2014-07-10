@@ -12,7 +12,8 @@ import SpriteKit
 
 class Snowflake: SKSpriteNode, CollisionHandling {
     init(scale: CGFloat) {
-        super.init(imageNamed: "spark.png")
+        let texture = SKTexture(imageNamed: "spark.png")
+        super.init(texture: texture, color: nil, size: texture.size())
         self.size = CGSize(width: self.size.width * scale, height: self.size.height * scale)
         self.name = "Snowflake"
         
@@ -20,10 +21,6 @@ class Snowflake: SKSpriteNode, CollisionHandling {
         self.physicsBody.categoryBitMask = ObjectCategory.Snow()
         self.physicsBody.collisionBitMask = ObjectCategory.Flame() | ObjectCategory.Floor()
         self.physicsBody.contactTestBitMask = ObjectCategory.Flame() | ObjectCategory.Floor()
-    }
-    
-    init(texture: SKTexture!) {
-        super.init(texture: texture)
     }
     
     init(texture: SKTexture!, color: UIColor!, size: CGSize) {
