@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2613BDEB1951C7FF00D15DC2 /* Snowflake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613BDEA1951C7FF00D15DC2 /* Snowflake.swift */; };
-		262401BC194B357000332234 /* SKEmitterNode+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262401BB194B357000332234 /* SKEmitterNode+Util.swift */; };
 		265451D4194A047300D3B25A /* RngTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265451D3194A047300D3B25A /* RngTests.swift */; };
 		265451D7194B010C00D3B25A /* Rng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265451D6194B010C00D3B25A /* Rng.swift */; };
 		265451D8194B010C00D3B25A /* Rng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265451D6194B010C00D3B25A /* Rng.swift */; };
@@ -52,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		2613BDEA1951C7FF00D15DC2 /* Snowflake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snowflake.swift; sourceTree = "<group>"; };
-		262401BB194B357000332234 /* SKEmitterNode+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKEmitterNode+Util.swift"; sourceTree = "<group>"; };
 		265451D2194A047200D3B25A /* ShooterTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShooterTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		265451D3194A047300D3B25A /* RngTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RngTests.swift; sourceTree = "<group>"; };
 		265451D5194B010B00D3B25A /* Shooter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shooter-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 		5A3BD5191826406C008357AE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				262401BB194B357000332234 /* SKEmitterNode+Util.swift */,
 				265451D6194B010C00D3B25A /* Rng.swift */,
 				265451D5194B010B00D3B25A /* Shooter-Bridging-Header.h */,
 				26D019011952DA8400D68E84 /* Array+Util.swift */,
@@ -369,7 +366,6 @@
 				26D019001951EBC000D68E84 /* Flame.swift in Sources */,
 				26F1B520194F37B50087C7A1 /* Constants.swift in Sources */,
 				26618626194F40C1004D65C9 /* CollisionHandling.swift in Sources */,
-				262401BC194B357000332234 /* SKEmitterNode+Util.swift in Sources */,
 				5A3BD4E6182634BE008357AE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

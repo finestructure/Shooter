@@ -18,13 +18,13 @@ class Snowflake: SKSpriteNode, CollisionHandling {
         self.name = "Snowflake"
         
         self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/2 * 0.3)
-        self.physicsBody.categoryBitMask = ObjectCategory.Snow()
-        self.physicsBody.collisionBitMask = ObjectCategory.Flame() | ObjectCategory.Floor()
-        self.physicsBody.contactTestBitMask = ObjectCategory.Flame() | ObjectCategory.Floor()
+        self.physicsBody?.categoryBitMask = ObjectCategory.Snow()
+        self.physicsBody?.collisionBitMask = ObjectCategory.Flame() | ObjectCategory.Floor()
+        self.physicsBody?.contactTestBitMask = ObjectCategory.Flame() | ObjectCategory.Floor()
     }
-    
-    init(texture: SKTexture!, color: UIColor!, size: CGSize) {
-        super.init(texture: texture, color: color, size: size)
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     func hasLanded() {
@@ -37,11 +37,11 @@ class Snowflake: SKSpriteNode, CollisionHandling {
     
     func evaporate() {
         removeAllActions()
-        var steam = SKEmitterNode(particleFileName: "steam")
+        var steam = SKEmitterNode(fileNamed: "steam")
         let remove = SKAction.removeFromParent()
         let puff = SKAction.runBlock {
             steam.position = self.position
-            self.scene.addChild(steam)
+            self.scene?.addChild(steam)
             let wait = SKAction.waitForDuration(1)
             steam.runAction(SKAction.sequence([wait, remove]))
         }
@@ -51,7 +51,7 @@ class Snowflake: SKSpriteNode, CollisionHandling {
     func collide(body: SKPhysicsBody) {
         if body.isKindOfClass(FloorSegment.classForCoder()) {
             Collider.collide(self, floorSegment: body.node as FloorSegment)
-        } else if body.node.isKindOfClass(Flame.classForCoder()) {
+        } else if (body.node?.isKindOfClass(Flame.classForCoder()) != nil) {
             Collider.collide(self, flame: body.node as Flame)
         }
     }

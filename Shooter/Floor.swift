@@ -26,8 +26,8 @@ class Floor: NSObject {
             let rect = CGRect(x: x, y: y, width: segmentWidth, height: height)
             var s = FloorSegment(rect: rect)
             s.previous = self.segments.last
-            if s.previous {
-                s.previous!.next = s
+            if let prev = s.previous {
+                prev.next = s
             }
             self.segments.append(s)
             scene.addChild(s)

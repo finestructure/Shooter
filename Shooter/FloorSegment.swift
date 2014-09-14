@@ -33,8 +33,12 @@ class FloorSegment: SKNode, CollisionHandling {
         self.name = "FloorSegment"
         
         self.physicsBody = SKPhysicsBody(rectangleOfSize: rect.size)
-        self.physicsBody.dynamic = false
-        self.physicsBody.categoryBitMask = ObjectCategory.Floor()
+        self.physicsBody?.dynamic = false
+        self.physicsBody?.categoryBitMask = ObjectCategory.Floor()
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     func collide(body: SKPhysicsBody) {
