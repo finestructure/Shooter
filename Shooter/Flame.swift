@@ -47,6 +47,8 @@ class Flame: SKEmitterNode, CollisionHandling {
     }
     
     func collide(body: SKPhysicsBody) {
-        Collider.collide(body.node as Snowflake, flame: self)
+        if let flake = body.node as? Snowflake {
+            Collider.collide(flake: flake, flame: self)
+        }
     }
 }

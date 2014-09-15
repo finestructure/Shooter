@@ -49,10 +49,11 @@ class Snowflake: SKSpriteNode, CollisionHandling {
     }
     
     func collide(body: SKPhysicsBody) {
-        if body.isKindOfClass(FloorSegment.classForCoder()) {
-            Collider.collide(self, floorSegment: body.node as FloorSegment)
-        } else if (body.node?.isKindOfClass(Flame.classForCoder()) != nil) {
-            Collider.collide(self, flame: body.node as Flame)
+        if let floor = body.node as? FloorSegment {
+            Collider.collide(flake: self, floorSegment: floor)
+        }
+        if let flame = body.node as? Flame {
+            Collider.collide(flake: self, flame: flame)
         }
     }
 }

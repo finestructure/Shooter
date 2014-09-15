@@ -9,11 +9,11 @@
 import Foundation
 
 extension Array {
-    var last: T? {
-    if self.count > 0 {
-        return self[self.endIndex - 1]
-    } else {
-        return nil
+    func last() -> T? {
+        if self.count > 0 {
+            return self[self.endIndex - 1]
+        } else {
+            return nil
         }
     }
 }

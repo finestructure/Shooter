@@ -42,8 +42,8 @@ class FloorSegment: SKNode, CollisionHandling {
     }
     
     func collide(body: SKPhysicsBody) {
-        if body.isKindOfClass(Snowflake.classForCoder()) {
-            Collider.collide(body.node as Snowflake, floorSegment: self)
+        if let flake = body.node as? Snowflake {
+            Collider.collide(flake: flake, floorSegment: self)
         }
     }
     
@@ -64,10 +64,10 @@ class FloorSegment: SKNode, CollisionHandling {
         var next = self.next;
         for i in 0..<GrowthSpeed {
             growth = growth * DampeningFactor;
-            prev!.growBy(growth)
-            next!.growBy(growth)
-            prev = prev!.previous
-            next = next!.next
-            }
+            prev?.growBy(growth)
+            next?.growBy(growth)
+            prev = prev?.previous
+            next = next?.next
+        }
     }
 }
