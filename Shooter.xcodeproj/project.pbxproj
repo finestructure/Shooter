@@ -19,6 +19,7 @@
 		26D019021952DA8400D68E84 /* Array+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D019011952DA8400D68E84 /* Array+Util.swift */; };
 		26F1B520194F37B50087C7A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1B51F194F37B50087C7A1 /* Constants.swift */; };
 		26F1B521194F37B50087C7A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1B51F194F37B50087C7A1 /* Constants.swift */; };
+		5A0C623019C6D4C400A0D2A8 /* SnowMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0C622F19C6D4C400A0D2A8 /* SnowMachine.swift */; };
 		5A3BD4D8182634BE008357AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4D7182634BE008357AE /* Foundation.framework */; };
 		5A3BD4DA182634BE008357AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4D9182634BE008357AE /* CoreGraphics.framework */; };
 		5A3BD4DC182634BE008357AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4DB182634BE008357AE /* UIKit.framework */; };
@@ -33,7 +34,6 @@
 		5A3BD51518263938008357AE /* flame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51318263938008357AE /* flame.sks */; };
 		5A3BD51618263938008357AE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51418263938008357AE /* spark.png */; };
 		5A3BD5201826433A008357AE /* snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51F1826433A008357AE /* snow.sks */; };
-		5A3BD526182668B1008357AE /* SnowMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD525182668B1008357AE /* SnowMachine.m */; };
 		5AB7724118312B7C0099AD99 /* game_over.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7724018312B7C0099AD99 /* game_over.m4a */; };
 		5AB7724318312CF90099AD99 /* no_sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7724218312CF90099AD99 /* no_sound.m4a */; };
 		5AD87734182C43660063A920 /* steam.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5AD87733182C43660063A920 /* steam.sks */; };
@@ -64,6 +64,7 @@
 		26D018FF1951EBC000D68E84 /* Flame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flame.swift; sourceTree = "<group>"; };
 		26D019011952DA8400D68E84 /* Array+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Util.swift"; sourceTree = "<group>"; };
 		26F1B51F194F37B50087C7A1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5A0C622F19C6D4C400A0D2A8 /* SnowMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowMachine.swift; sourceTree = "<group>"; };
 		5A3BD4D4182634BE008357AE /* Shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3BD4D7182634BE008357AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A3BD4D9182634BE008357AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,8 +86,6 @@
 		5A3BD51318263938008357AE /* flame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = flame.sks; sourceTree = "<group>"; };
 		5A3BD51418263938008357AE /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		5A3BD51F1826433A008357AE /* snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snow.sks; sourceTree = "<group>"; };
-		5A3BD524182668B1008357AE /* SnowMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowMachine.h; sourceTree = "<group>"; };
-		5A3BD525182668B1008357AE /* SnowMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowMachine.m; sourceTree = "<group>"; };
 		5AB7724018312B7C0099AD99 /* game_over.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = game_over.m4a; sourceTree = "<group>"; };
 		5AB7724218312CF90099AD99 /* no_sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = no_sound.m4a; sourceTree = "<group>"; };
 		5AD87733182C43660063A920 /* steam.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = steam.sks; sourceTree = "<group>"; };
@@ -210,9 +209,8 @@
 				5A3BD4EF182634BE008357AE /* ViewController.m */,
 				5A3BD4F1182634BE008357AE /* MyScene.h */,
 				5A3BD4F2182634BE008357AE /* MyScene.m */,
-				5A3BD524182668B1008357AE /* SnowMachine.h */,
-				5A3BD525182668B1008357AE /* SnowMachine.m */,
 				26F1B51F194F37B50087C7A1 /* Constants.swift */,
+				5A0C622F19C6D4C400A0D2A8 /* SnowMachine.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -353,8 +351,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A3BD526182668B1008357AE /* SnowMachine.m in Sources */,
 				26D018FE1951E89300D68E84 /* FloorSegment.swift in Sources */,
+				5A0C623019C6D4C400A0D2A8 /* SnowMachine.swift in Sources */,
 				2613BDEB1951C7FF00D15DC2 /* Snowflake.swift in Sources */,
 				265451D7194B010C00D3B25A /* Rng.swift in Sources */,
 				5A3BD4F3182634BE008357AE /* MyScene.m in Sources */,

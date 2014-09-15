@@ -9,7 +9,6 @@
 #import "MyScene.h"
 
 #import "Shooter-Swift.h"
-#import "SnowMachine.h"
 
 
 static const CGFloat FlameYOffset = 100;
