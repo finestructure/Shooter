@@ -50,9 +50,7 @@
 
 /* Begin PBXFileReference section */
 		2613BDEA1951C7FF00D15DC2 /* Snowflake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snowflake.swift; sourceTree = "<group>"; };
-		265451D2194A047200D3B25A /* ShooterTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShooterTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		265451D3194A047300D3B25A /* RngTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RngTests.swift; sourceTree = "<group>"; };
-		265451D5194B010B00D3B25A /* Shooter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shooter-Bridging-Header.h"; sourceTree = "<group>"; };
 		265451D6194B010C00D3B25A /* Rng.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rng.swift; sourceTree = "<group>"; };
 		265E844D1949FE5C00D2587F /* ShooterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShooterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		265E84501949FE5C00D2587F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 		5A3BD4DD182634BE008357AE /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		5A3BD4E1182634BE008357AE /* Shooter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shooter-Info.plist"; sourceTree = "<group>"; };
 		5A3BD4E3182634BE008357AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5A3BD4E7182634BE008357AE /* Shooter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shooter-Prefix.pch"; sourceTree = "<group>"; };
 		5A3BD4EC182634BE008357AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A3BD4F6182634BE008357AE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5A3BD4FD182634BE008357AE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -113,7 +110,6 @@
 			children = (
 				265E844F1949FE5C00D2587F /* Supporting Files */,
 				265451D3194A047300D3B25A /* RngTests.swift */,
-				265451D2194A047200D3B25A /* ShooterTests-Bridging-Header.h */,
 			);
 			path = ShooterTests;
 			sourceTree = "<group>";
@@ -173,7 +169,6 @@
 			children = (
 				5A3BD4E1182634BE008357AE /* Shooter-Info.plist */,
 				5A3BD4E2182634BE008357AE /* InfoPlist.strings */,
-				5A3BD4E7182634BE008357AE /* Shooter-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -210,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				265451D6194B010C00D3B25A /* Rng.swift */,
-				265451D5194B010B00D3B25A /* Shooter-Bridging-Header.h */,
 				26D019011952DA8400D68E84 /* Array+Util.swift */,
 			);
 			name = Helpers;
@@ -409,7 +403,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ShooterTests/ShooterTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -432,7 +425,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ShooterTests/ShooterTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -519,7 +511,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Shooter/Shooter-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
@@ -537,7 +528,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Shooter/Shooter-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
