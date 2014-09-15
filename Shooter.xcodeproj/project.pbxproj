@@ -26,8 +26,6 @@
 		5A3BD4DC182634BE008357AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4DB182634BE008357AE /* UIKit.framework */; };
 		5A3BD4DE182634BE008357AE /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4DD182634BE008357AE /* SpriteKit.framework */; };
 		5A3BD4E4182634BE008357AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD4E2182634BE008357AE /* InfoPlist.strings */; };
-		5A3BD4E6182634BE008357AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD4E5182634BE008357AE /* main.m */; };
-		5A3BD4EA182634BE008357AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD4E9182634BE008357AE /* AppDelegate.m */; };
 		5A3BD4ED182634BE008357AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD4EB182634BE008357AE /* Main.storyboard */; };
 		5A3BD4F7182634BE008357AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD4F6182634BE008357AE /* Images.xcassets */; };
 		5A3BD51518263938008357AE /* flame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51318263938008357AE /* flame.sks */; };
@@ -36,6 +34,7 @@
 		5AB7724118312B7C0099AD99 /* game_over.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7724018312B7C0099AD99 /* game_over.m4a */; };
 		5AB7724318312CF90099AD99 /* no_sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7724218312CF90099AD99 /* no_sound.m4a */; };
 		5AB8FB7E19C734D1007D571C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB8FB7D19C734D1007D571C /* ViewController.swift */; };
+		5AB8FB8019C738C6007D571C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB8FB7F19C738C6007D571C /* AppDelegate.swift */; };
 		5AD87734182C43660063A920 /* steam.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5AD87733182C43660063A920 /* steam.sks */; };
 /* End PBXBuildFile section */
 
@@ -73,10 +72,7 @@
 		5A3BD4DD182634BE008357AE /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		5A3BD4E1182634BE008357AE /* Shooter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shooter-Info.plist"; sourceTree = "<group>"; };
 		5A3BD4E3182634BE008357AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5A3BD4E5182634BE008357AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A3BD4E7182634BE008357AE /* Shooter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shooter-Prefix.pch"; sourceTree = "<group>"; };
-		5A3BD4E8182634BE008357AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5A3BD4E9182634BE008357AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5A3BD4EC182634BE008357AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A3BD4F6182634BE008357AE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5A3BD4FD182634BE008357AE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -86,6 +82,7 @@
 		5AB7724018312B7C0099AD99 /* game_over.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = game_over.m4a; sourceTree = "<group>"; };
 		5AB7724218312CF90099AD99 /* no_sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = no_sound.m4a; sourceTree = "<group>"; };
 		5AB8FB7D19C734D1007D571C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5AB8FB7F19C738C6007D571C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AD87733182C43660063A920 /* steam.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = steam.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,7 +173,6 @@
 			children = (
 				5A3BD4E1182634BE008357AE /* Shooter-Info.plist */,
 				5A3BD4E2182634BE008357AE /* InfoPlist.strings */,
-				5A3BD4E5182634BE008357AE /* main.m */,
 				5A3BD4E7182634BE008357AE /* Shooter-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -201,8 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				5A94A30A1826B5980035BA0D /* Nodes */,
-				5A3BD4E8182634BE008357AE /* AppDelegate.h */,
-				5A3BD4E9182634BE008357AE /* AppDelegate.m */,
+				5AB8FB7F19C738C6007D571C /* AppDelegate.swift */,
 				26F1B51F194F37B50087C7A1 /* Constants.swift */,
 				5A22D76019C6FEC900F60485 /* Scene.swift */,
 				5A0C622F19C6D4C400A0D2A8 /* SnowMachine.swift */,
@@ -350,17 +345,16 @@
 				5AB8FB7E19C734D1007D571C /* ViewController.swift in Sources */,
 				26D018FE1951E89300D68E84 /* FloorSegment.swift in Sources */,
 				5A0C623019C6D4C400A0D2A8 /* SnowMachine.swift in Sources */,
+				5AB8FB8019C738C6007D571C /* AppDelegate.swift in Sources */,
 				5A22D76119C6FEC900F60485 /* Scene.swift in Sources */,
 				2613BDEB1951C7FF00D15DC2 /* Snowflake.swift in Sources */,
 				265451D7194B010C00D3B25A /* Rng.swift in Sources */,
 				26D019021952DA8400D68E84 /* Array+Util.swift in Sources */,
-				5A3BD4EA182634BE008357AE /* AppDelegate.m in Sources */,
 				26D018FC1951E0AD00D68E84 /* Floor.swift in Sources */,
 				26618628194F41B0004D65C9 /* Collider.swift in Sources */,
 				26D019001951EBC000D68E84 /* Flame.swift in Sources */,
 				26F1B520194F37B50087C7A1 /* Constants.swift in Sources */,
 				26618626194F40C1004D65C9 /* CollisionHandling.swift in Sources */,
-				5A3BD4E6182634BE008357AE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
