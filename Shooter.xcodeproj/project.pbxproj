@@ -20,6 +20,7 @@
 		26F1B520194F37B50087C7A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1B51F194F37B50087C7A1 /* Constants.swift */; };
 		26F1B521194F37B50087C7A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1B51F194F37B50087C7A1 /* Constants.swift */; };
 		5A0C623019C6D4C400A0D2A8 /* SnowMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0C622F19C6D4C400A0D2A8 /* SnowMachine.swift */; };
+		5A22D76119C6FEC900F60485 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D76019C6FEC900F60485 /* Scene.swift */; };
 		5A3BD4D8182634BE008357AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4D7182634BE008357AE /* Foundation.framework */; };
 		5A3BD4DA182634BE008357AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4D9182634BE008357AE /* CoreGraphics.framework */; };
 		5A3BD4DC182634BE008357AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4DB182634BE008357AE /* UIKit.framework */; };
@@ -29,7 +30,6 @@
 		5A3BD4EA182634BE008357AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD4E9182634BE008357AE /* AppDelegate.m */; };
 		5A3BD4ED182634BE008357AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD4EB182634BE008357AE /* Main.storyboard */; };
 		5A3BD4F0182634BE008357AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD4EF182634BE008357AE /* ViewController.m */; };
-		5A3BD4F3182634BE008357AE /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD4F2182634BE008357AE /* MyScene.m */; };
 		5A3BD4F7182634BE008357AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD4F6182634BE008357AE /* Images.xcassets */; };
 		5A3BD51518263938008357AE /* flame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51318263938008357AE /* flame.sks */; };
 		5A3BD51618263938008357AE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3BD51418263938008357AE /* spark.png */; };
@@ -65,6 +65,7 @@
 		26D019011952DA8400D68E84 /* Array+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Util.swift"; sourceTree = "<group>"; };
 		26F1B51F194F37B50087C7A1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5A0C622F19C6D4C400A0D2A8 /* SnowMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowMachine.swift; sourceTree = "<group>"; };
+		5A22D76019C6FEC900F60485 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		5A3BD4D4182634BE008357AE /* Shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3BD4D7182634BE008357AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A3BD4D9182634BE008357AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,8 +80,6 @@
 		5A3BD4EC182634BE008357AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A3BD4EE182634BE008357AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5A3BD4EF182634BE008357AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5A3BD4F1182634BE008357AE /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		5A3BD4F2182634BE008357AE /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
 		5A3BD4F6182634BE008357AE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5A3BD4FD182634BE008357AE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5A3BD51318263938008357AE /* flame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = flame.sks; sourceTree = "<group>"; };
@@ -207,9 +206,8 @@
 				5A3BD4E9182634BE008357AE /* AppDelegate.m */,
 				5A3BD4EE182634BE008357AE /* ViewController.h */,
 				5A3BD4EF182634BE008357AE /* ViewController.m */,
-				5A3BD4F1182634BE008357AE /* MyScene.h */,
-				5A3BD4F2182634BE008357AE /* MyScene.m */,
 				26F1B51F194F37B50087C7A1 /* Constants.swift */,
+				5A22D76019C6FEC900F60485 /* Scene.swift */,
 				5A0C622F19C6D4C400A0D2A8 /* SnowMachine.swift */,
 			);
 			name = Classes;
@@ -353,9 +351,9 @@
 			files = (
 				26D018FE1951E89300D68E84 /* FloorSegment.swift in Sources */,
 				5A0C623019C6D4C400A0D2A8 /* SnowMachine.swift in Sources */,
+				5A22D76119C6FEC900F60485 /* Scene.swift in Sources */,
 				2613BDEB1951C7FF00D15DC2 /* Snowflake.swift in Sources */,
 				265451D7194B010C00D3B25A /* Rng.swift in Sources */,
-				5A3BD4F3182634BE008357AE /* MyScene.m in Sources */,
 				26D019021952DA8400D68E84 /* Array+Util.swift in Sources */,
 				5A3BD4F0182634BE008357AE /* ViewController.m in Sources */,
 				5A3BD4EA182634BE008357AE /* AppDelegate.m in Sources */,
