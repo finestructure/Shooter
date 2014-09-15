@@ -8,7 +8,8 @@
 
 import UIKit
 
-// temporary - swift enums cannot be used in objc
+//BLOG
+//FIXME: - swift enums cannot be used in objc
 @objc class ObjectCategory: NSObject {
     class func Floor() -> UInt32 {
         return (0x1 << 0)
