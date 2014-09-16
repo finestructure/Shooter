@@ -20,6 +20,7 @@
 		26F1B520194F37B50087C7A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1B51F194F37B50087C7A1 /* Constants.swift */; };
 		26F1B521194F37B50087C7A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1B51F194F37B50087C7A1 /* Constants.swift */; };
 		5A0C623019C6D4C400A0D2A8 /* SnowMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0C622F19C6D4C400A0D2A8 /* SnowMachine.swift */; };
+		5A1735EB19C8176900247DFF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1735EA19C8176900247DFF /* Utils.swift */; };
 		5A22D76119C6FEC900F60485 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D76019C6FEC900F60485 /* Scene.swift */; };
 		5A3BD4D8182634BE008357AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4D7182634BE008357AE /* Foundation.framework */; };
 		5A3BD4DA182634BE008357AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3BD4D9182634BE008357AE /* CoreGraphics.framework */; };
@@ -62,6 +63,7 @@
 		26D019011952DA8400D68E84 /* Array+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Util.swift"; sourceTree = "<group>"; };
 		26F1B51F194F37B50087C7A1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5A0C622F19C6D4C400A0D2A8 /* SnowMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowMachine.swift; sourceTree = "<group>"; };
+		5A1735EA19C8176900247DFF /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		5A22D76019C6FEC900F60485 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		5A3BD4D4182634BE008357AE /* Shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3BD4D7182634BE008357AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -206,6 +208,7 @@
 			children = (
 				265451D6194B010C00D3B25A /* Rng.swift */,
 				26D019011952DA8400D68E84 /* Array+Util.swift */,
+				5A1735EA19C8176900247DFF /* Utils.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				5AB8FB7E19C734D1007D571C /* ViewController.swift in Sources */,
 				26D018FE1951E89300D68E84 /* FloorSegment.swift in Sources */,
 				5A0C623019C6D4C400A0D2A8 /* SnowMachine.swift in Sources */,
+				5A1735EB19C8176900247DFF /* Utils.swift in Sources */,
 				5AB8FB8019C738C6007D571C /* AppDelegate.swift in Sources */,
 				5A22D76119C6FEC900F60485 /* Scene.swift in Sources */,
 				2613BDEB1951C7FF00D15DC2 /* Snowflake.swift in Sources */,
