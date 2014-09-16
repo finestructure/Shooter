@@ -274,6 +274,9 @@
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 5A3BD4D3182634BE008357AE;
 					};
+					5A3BD4D3182634BE008357AE = {
+						DevelopmentTeam = D9A9676E35;
+					};
 				};
 			};
 			buildConfigurationList = 5A3BD4CF182634BE008357AE /* Build configuration list for PBXProject "Shooter" */;
@@ -505,6 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Shooter/Shooter-Prefix.pch";
 				INFOPLIST_FILE = "Shooter/Shooter-Info.plist";
@@ -522,6 +526,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Shooter/Shooter-Prefix.pch";
 				INFOPLIST_FILE = "Shooter/Shooter-Info.plist";
