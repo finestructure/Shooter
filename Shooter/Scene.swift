@@ -87,11 +87,11 @@ class Scene: SKScene, SKPhysicsContactDelegate {
     
     func startGame() {
         // fade out intro
-        let fall = SKAction.moveByX(0, y: -self.frame.size.height, duration: 2)
-        let fade = SKAction.fadeOutWithDuration(1)
+        let zoom = SKAction.scaleBy(2, duration: 0.2)
+        let fade = SKAction.fadeOutWithDuration(0.2)
         let remove = SKAction.removeFromParent()
         let fadeAndRemove = SKAction.sequence([fade, remove])
-        let group = SKAction.group([fall, fadeAndRemove])
+        let group = SKAction.group([zoom, fadeAndRemove])
         self.intro?.runAction(group)
         // fade in time
         time?.runAction(SKAction.fadeInWithDuration(1.5))
