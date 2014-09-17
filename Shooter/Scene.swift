@@ -27,12 +27,30 @@ class Scene: SKScene, SKPhysicsContactDelegate {
         
         self.backgroundColor = SKColor(red: 0.15, green: 0.15, blue: 0.3, alpha: 1)
         
+        // play no_sound to init audio system (this prevents lag when the game over sound is played at the end
+        self.runAction(SKAction.playSoundFileNamed("no_sound.m4a", waitForCompletion: false))
+        
+        self.physicsWorld.gravity = CGVector(0, 0)
+        self.physicsWorld.contactDelegate = self
+        
+        self.setupStartScreen()
+    }
+
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    
+    func setupStartScreen() {
         // description
         intro = SKLabelNode(fontNamed: "Chalkduster")
         intro?.text = "Touch to start"
         intro?.fontSize = 24
-        intro?.position = CGPoint(x: CGRectGetMidX(self.frame), y: self.frame.size.height - 100)
+        intro?.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
+        intro?.alpha = 0
         self.addChild(intro!)
+        intro?.runAction(SKAction.fadeInWithDuration(1))
         
         // time
         time = SKLabelNode(fontNamed: "Chalkduster")
@@ -49,23 +67,21 @@ class Scene: SKScene, SKPhysicsContactDelegate {
         
         // flame
         flame = Flame(position: CGPoint(x: CGRectGetMidX(self.frame), y: FlameYOffset))
+        flame?.alpha = 0
         self.addChild(flame!)
-        
-        // play no_sound to init audio system (this prevents lag when the game over sound is played at the end
-        self.runAction(SKAction.playSoundFileNamed("no_sound.m4a", waitForCompletion: false))
-        
-        self.physicsWorld.gravity = CGVector(0, 0)
-        self.physicsWorld.contactDelegate = self
-    }
-
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        flame?.runAction(SKAction.fadeInWithDuration(1))
     }
     
     
     func isGameOver() -> Bool {
         return self.floor?.maxHeight >= self.flame?.bottomEdgeY
+    }
+    
+    
+    func resetGame() {
+        self.removeAllChildren()
+        self.alpha = 1
+        self.setupStartScreen()
     }
     
     
@@ -86,8 +102,8 @@ class Scene: SKScene, SKPhysicsContactDelegate {
     
     
     func endGame(survivalTime: CFTimeInterval) {
-        gameIsRunning = false
-        
+        self.gameIsRunning = false
+
         NSLog("GAME OVER!")
         
         SnowMachine.stop()
@@ -139,6 +155,12 @@ class Scene: SKScene, SKPhysicsContactDelegate {
         
         // play game over sound
         self.runAction(SKAction.playSoundFileNamed("game_over.m4a", waitForCompletion: false))
+        
+        delay(7) {
+            self.runAction(SKAction.fadeOutWithDuration(2)) {
+                self.resetGame()
+            }
+        }
     }
     
     
