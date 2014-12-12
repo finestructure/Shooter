@@ -10,29 +10,29 @@
 	<string>Shooter</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>544CF00C-A72F-4163-971A-C484A2B858CE</key>
-		<string>file:///Users/sven/Dropbox/Projects/Shooter.git/</string>
+		<key>81DCF1566E48A26FBDFA8BFD0F46D1945C7D4AEA</key>
+		<string>/Users/sas/Dropbox/projects/Shooter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Shooter.xcodeproj/project.xcworkspace</string>
+	<string>Shooter.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>544CF00C-A72F-4163-971A-C484A2B858CE</key>
+		<key>81DCF1566E48A26FBDFA8BFD0F46D1945C7D4AEA</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>file:///Users/sven/Dropbox/Projects/Shooter.git/</string>
+	<string>/Users/sas/Dropbox/projects/Shooter.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>544CF00C-A72F-4163-971A-C484A2B858CE</string>
+	<string>81DCF1566E48A26FBDFA8BFD0F46D1945C7D4AEA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>544CF00C-A72F-4163-971A-C484A2B858CE</string>
+			<string>81DCF1566E48A26FBDFA8BFD0F46D1945C7D4AEA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Shooter</string>
 		</dict>
