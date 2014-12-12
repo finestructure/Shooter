@@ -86,11 +86,11 @@ class SnowMachine: NSObject {
     
     
     private class func createSnowflakeInScene(scene: SKScene) -> Snowflake {
-        let timeRange = CGVector(2, 4)
-        let scaleRange = CGVector(0.15, 0.4)
-        let xRange = CGVector(0, scene.size.width)
+        let timeRange = CGVector(dx: 2, dy: 4)
+        let scaleRange = CGVector(dx: 0.15, dy: 0.4)
+        let xRange = CGVector(dx: 0, dy: scene.size.width)
         let openingAngle = 12 * M_PI/180
-        let angleRange = CGVector(-openingAngle, openingAngle)
+        let angleRange = CGVector(dx: -openingAngle, dy: openingAngle)
         
         let time = Rng.uniformRange(timeRange)
         let scale = CGFloat(Rng.uniformRange(scaleRange))
