@@ -37,7 +37,7 @@ class FloorSegment: SKNode, CollisionHandling {
         self.physicsBody?.categoryBitMask = ObjectCategory.Floor()
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
