@@ -30,14 +30,14 @@ class Scene: SKScene, SKPhysicsContactDelegate {
         // play no_sound to init audio system (this prevents lag when the game over sound is played at the end
         self.runAction(SKAction.playSoundFileNamed("no_sound.m4a", waitForCompletion: false))
         
-        self.physicsWorld.gravity = CGVector(0, 0)
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         self.physicsWorld.contactDelegate = self
         
         self.setupStartScreen()
     }
 
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

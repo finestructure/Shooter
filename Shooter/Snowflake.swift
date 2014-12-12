@@ -23,7 +23,7 @@ class Snowflake: SKSpriteNode, CollisionHandling {
         self.physicsBody?.contactTestBitMask = ObjectCategory.Flame() | ObjectCategory.Floor()
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
