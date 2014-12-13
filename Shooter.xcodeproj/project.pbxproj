@@ -278,7 +278,7 @@
 						TestTargetID = 5A3BD4D3182634BE008357AE;
 					};
 					5A3BD4D3182634BE008357AE = {
-						DevelopmentTeam = D9A9676E35;
+						DevelopmentTeam = 45TWE6N5C2;
 					};
 				};
 			};
