@@ -15,8 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         if let skView = self.view as? SKView {
-            skView.showsFPS = true
-            skView.showsNodeCount = true
+            if UIDevice.currentDevice().model == "iPhone Simulator" {
+                skView.showsFPS = true
+                skView.showsNodeCount = true
+            }
             
             let scene = Scene(size: skView.bounds.size)
             scene.scaleMode = .AspectFill
