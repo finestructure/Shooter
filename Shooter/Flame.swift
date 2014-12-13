@@ -43,7 +43,7 @@ class Flame: SKEmitterNode, CollisionHandling {
         
         self.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 24, height: 110))
         self.physicsBody?.dynamic = false
-        self.physicsBody?.categoryBitMask = ObjectCategory.Flame()
+        self.physicsBody?.categoryBitMask = ObjectCategory.Flame.toBitMask()
     }
     
     func collide(body: SKPhysicsBody) {

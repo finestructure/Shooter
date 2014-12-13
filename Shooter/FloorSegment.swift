@@ -34,7 +34,7 @@ class FloorSegment: SKNode, CollisionHandling {
         
         self.physicsBody = SKPhysicsBody(rectangleOfSize: rect.size)
         self.physicsBody?.dynamic = false
-        self.physicsBody?.categoryBitMask = ObjectCategory.Floor()
+        self.physicsBody?.categoryBitMask = ObjectCategory.Floor.toBitMask()
     }
 
     required init?(coder aDecoder: NSCoder) {

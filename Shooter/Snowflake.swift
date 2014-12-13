@@ -18,9 +18,9 @@ class Snowflake: SKSpriteNode, CollisionHandling {
         self.name = "Snowflake"
         
         self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/2 * 0.3)
-        self.physicsBody?.categoryBitMask = ObjectCategory.Snow()
-        self.physicsBody?.collisionBitMask = ObjectCategory.Flame() | ObjectCategory.Floor()
-        self.physicsBody?.contactTestBitMask = ObjectCategory.Flame() | ObjectCategory.Floor()
+        self.physicsBody?.categoryBitMask = ObjectCategory.Snow.toBitMask()
+        self.physicsBody?.collisionBitMask = ObjectCategory.Flame.toBitMask() | ObjectCategory.Floor.toBitMask()
+        self.physicsBody?.contactTestBitMask = ObjectCategory.Flame.toBitMask() | ObjectCategory.Floor.toBitMask()
     }
 
     required init?(coder aDecoder: NSCoder) {
